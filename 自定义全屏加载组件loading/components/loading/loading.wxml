@@ -1,0 +1,9 @@
+<view class="loading-cell" wx:if="{{show}}">
+    <view class="line-bounce">
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+    </view>
+  </view>

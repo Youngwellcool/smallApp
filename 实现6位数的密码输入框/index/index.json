@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "pay-box": "./components/paybox/index"
+  }
+}

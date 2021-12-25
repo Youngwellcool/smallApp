@@ -1,0 +1,54 @@
+<!--选择图片页面-->
+<view class='welcome'>欢迎进入中国传媒大学模拟考试现场</view>
+
+<!-- 倒计时 -->
+<view class='time'>{{countDownNum}}</view>
+<!-- 橡皮卷笔刀手臂图片的定位 -->
+<image class='rubber' src='https://ysm.onedisme.com/dayimage/simulation/rubber.png'></image>
+<image class='pencil_sharpener' src='https://ysm.onedisme.com/dayimage/simulation/pencil_sharpener.png'></image>
+<image class='shield_hand' src='https://ysm.onedisme.com/dayimage/simulation/shield_hand.png'></image>
+<image class='right_hand' src='https://ysm.onedisme.com/dayimage/simulation/right_hand.png'></image>
+<!-- 题型 -->
+  <!-- <view class='type'>科目：编导测试</view> -->
+<!-- 成绩 -->
+ <view class="score">
+    <view class='achievement'>成绩</view>
+    <view class='score_row'>
+    <view wx:for='{{typeData}}' data-index='{{index}}' class='subject'>
+    <block wx:if='{{item.answer==1}}'><image src='https://ysm.onedisme.com/dayimage/simulation/correct.png' class='correct'></image></block>
+    <block wx:elif="{{item.answer==2}}"><image src='https://ysm.onedisme.com/dayimage/simulation/wrong.png' class='wrong'></image></block>
+    </view>
+    </view>
+  </view>
+  <!-- 题目序号 -->
+  <view class='serial'>第{{order}}题</view>
+  <!-- 题目 -->
+  <view class='subject_title'>{{artTopicName}}</view>
+  <!-- 视频 -->
+  <video class="myVideo" wx:if="{{artTopicVideo}}" src="{{getImagePrefixHost+'/'+artTopicVideo}}"  controls autoplay loop show-center-play-btn objectFit='contain'></video>
+  
+  <!-- 答案展示 -->
+    <scroll-view scroll-y  class="container">
+  <view wx:for='{{artAnswerContent}}' wx:key='answer' data-index='{{index}}' data-id="{{item.art_answer_id}}" class='answer' bindtap='chooseAnswer'>
+    <view class='letter choice'>{{letter[index]}}</view>
+    <!--未选择项 -->
+    <block wx:if="{{answer==0 || (answer==1 && item.art_answer_id!=artAnswerId) || ((answer==2 && item.art_answer_id!=artAnswerId && item.art_answer_id!=correctAnswer))}}">
+    <view class='choice'>{{item.art_answer_content}}</view>
+    </block>
+  <!-- 答题正确 -->
+  <block wx:if="{{answer==1 && item.art_answer_id==artAnswerId }}">
+   <view class='choice' style="background:greenyellow">{{item.art_answer_content}}</view>
+  </block>
+
+  <!-- 答题错误，选中项变红色 -->
+  <block wx:elif="{{answer==2 && item.art_answer_id==artAnswerId}}">
+   <view class='choice' style="background:red">{{item.art_answer_content}}</view>
+  </block>
+
+  <!-- 答题错误,未选中项正确的答案变绿色 -->
+  <block wx:elif="{{answer==2 && item.art_answer_id!=artAnswerId && item.art_answer_id==correctAnswer}}">
+   <view class='choice' style="background:greenyellow">{{item.art_answer_content}}</view>
+  </block>
+  </view>
+    </scroll-view>
+  

@@ -1,0 +1,5 @@
+<view class="input-wrap">
+    <textarea placeholder="请输入……" value="{{input}}" auto-height="{{autoHeight}}" auto-focus focus="{{focus}}" maxlength="{{maxlength}}"></textarea>
+    <view class="num-tips" wx:if="{{type==1}}">{{leftWordNum}}/{{maxlength}}字</view>
+</view>
+<button class="complete" form-type="submit">完成</button>

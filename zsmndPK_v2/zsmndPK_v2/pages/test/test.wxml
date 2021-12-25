@@ -1,0 +1,8 @@
+<!-- 保存绘画图片 -->
+<canvas wx:if="true" canvas-id='shareImg' class='survival'></canvas>
+<view wx:if="true" class='preview center'>
+  <view class='plotting center'>
+    <image src='{{preurl}}' mode='widthFix' class='previewImg'></image>
+    <button class='keep font32' bindtap='shareSave'>保存分享图</button>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+{ 
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "视频详情",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "usingComponents":{
+    "van-toast": "vant-weapp/toast",
+    "van-notice-bar": "vant-weapp/notice-bar",
+    "van-button": "vant-weapp/button",
+    "van-popup": "vant-weapp/popup",
+    "van-field": "vant-weapp/field",
+    "van-dialog": "vant-weapp/dialog",
+    "van-notify": "vant-weapp/notify",
+    "van-action-sheet": "vant-weapp/action-sheet",
+    "van-icon": "vant-weapp/icon"
+  }
+}

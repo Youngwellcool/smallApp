@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    
+    "my-component": "../my-component/my-component",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index"
+  }
+}

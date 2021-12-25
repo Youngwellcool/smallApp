@@ -1,0 +1,9 @@
+<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<view bindtap="touchOnGoods" style="padding-top: 100px;">加入购物车</view>
+<view class="bus">
+  <view class="count" hidden="{{hideCount}}">{{count}}</view>
+</view>
+<view class="good_box" hidden="{{hide_good_box}}"  style="left: {{bus_x}}px; top: {{bus_y}}px;">
+  <image src="../../images/product_x8.png"></image>
+</view>
+  

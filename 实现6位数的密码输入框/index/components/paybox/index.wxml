@@ -1,0 +1,13 @@
+<view class='container'>
+  <!-- 模拟输入框 -->
+  <view class='pay-box {{focusType ? "focus-border" : ""}}' bindtap="handleFocus" style='width: 604rpx;height: 98rpx'>
+    <block wx:for="{{boxList}}" wx:key="{{index}}">
+      <view class='password-box {{index === 0 ? "b-l-n":""}}'>
+        <view wx:if="{{(dataLength === item - 1)&& focusType}}" class="cursor"></view>
+        <view wx:if="{{dataLength >= item}}" class="input-black-dot"></view>
+      </view>
+    </block>
+  </view>
+  <!-- 隐藏input框 -->
+  <input value="{{input_value}}" focus="{{isFocus}}" maxlength="6" type="number" class='hidden-input' bindinput="handleSetData" bindfocus="handleUseFocus" bindblur="handleUseFocus" />
+</view>

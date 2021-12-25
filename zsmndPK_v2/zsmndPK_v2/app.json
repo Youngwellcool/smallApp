@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/twoFixation/twoFixation",
+    "pages/oneFixation/oneFixation",
+    "pages/certificat/certificat",
+    "pages/entry/entry",
+    "pages/achievement/achievement",
+    "pages/rankingList/rankingList",
+    "pages/question/picChoose/picChoose",
+    "pages/question/music/music",
+    "pages/question/video/video",
+    "pages/question/words/words",
+    "pages/question/voice/voice",
+    "pages/question/draw/draw",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "真实模拟艺考大PK",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

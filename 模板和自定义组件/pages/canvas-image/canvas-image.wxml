@@ -1,0 +1,11 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<!-- <main-content> -->
+  <view class='main'>
+    <view>canvas转images</view>
+    <painter palette="{{data}}" bind:imgOK="onImgOK" />
+
+    <button bindtap='downLoad'>下载图片</button>
+
+    <van-button type="danger" bind:click="toWeb">webview页面</van-button>
+  </view>
+<!-- </main-content> -->

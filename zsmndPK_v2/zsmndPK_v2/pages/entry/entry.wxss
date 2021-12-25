@@ -1,0 +1,113 @@
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome {
+  margin-left: 75rpx;
+  margin-top: 26rpx;
+}
+
+/* 橡皮擦图片 */
+.eraser image {
+  width: 112rpx;
+  height: 113rpx;
+  position: absolute;
+  top: 582rpx;
+  left: 0;
+  z-index: 5;
+}
+
+/* 书夹图片 */
+.book_end image {
+  width: 109rpx;
+  height: 105rpx;
+  position: absolute;
+  top: 320rpx;
+  right: 0;
+  z-index: 5;
+}
+
+/* 左手图片 */
+.left_hand image {
+  width: 218rpx;
+  height: 294rpx;
+  position: absolute;
+  bottom: 60rpx;
+  left: 0;
+  z-index: 5;
+}
+
+/* 右手图片 */
+.right_hand image {
+  width: 223rpx;
+  height: 334rpx;
+  position: absolute;
+  bottom: 117rpx;
+  right: 0;
+  z-index: 5;
+}
+
+/* 绑定手机区域 */
+.major {
+  width: 727rpx;
+  height: 1079rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.cheek {
+  width: 568rpx;
+  height: 306rpx;
+  margin-top: 40rpx;
+  border: 4rpx solid #000;
+}
+
+.within {
+  width: 540rpx;
+  height: 282rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 3rpx solid #999;
+}
+
+.handset input {
+  width: 487rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 13rpx;
+  margin-top: 33rpx;
+  border: 3rpx solid #999;
+}
+
+.identifying_code {
+  width: 500rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.identifying_code input {
+  width: 287rpx;
+  height: 80rpx;
+  padding-left: 13rpx;
+  border: 3rpx solid #999;
+}
+
+.identifying_code text {
+  margin-left: 24rpx;
+}
+
+.score {
+  width: 385rpx;
+  height: 110rpx;
+  margin-top: 182rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: url('https://ysm.onedisme.com/dayimage/simulation/blueness.png') no-repeat;
+  background-size: 385rpx 110rpx;
+}

@@ -1,0 +1,4 @@
+<wxs module='gesture' src='./gesture.wxs'></wxs>
+<gesture bind:touchMove='{{gesture.move}}'>
+  <view class="box" id='box'></view>
+</gesture> 

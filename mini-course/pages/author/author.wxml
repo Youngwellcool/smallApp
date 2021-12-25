@@ -1,0 +1,56 @@
+<!--pages/author/author.wxml-->
+<view class="div-top">
+  <image class="user-avatar" src="{{serverUrl}}{{author.avatar}}"></image>
+    <view class="user-fans">
+      <van-row gutter="10">
+        <van-col span="10">{{author.attention_num}} 关注</van-col>
+        <van-col span="10">{{author.fans_num}} 粉丝</van-col>
+      </van-row>
+    </view>
+    <view class="user-share">
+      <!-- 分享按钮 -->
+      <van-button round  type="primary" icon="share" size="small"  color="linear-gradient(to right, #4bb0ff, #6149f6)" open-type="share">分享</van-button>
+    </view>
+
+    <view class="attention-btn">
+      <van-button round type="info" size="mini" custom-style="width:150px;margin-left:1%;background-color:	#FF8C00;border-color:	#FF8C00;" bindtap="btnAttention">{{ attentionText }}</van-button>
+    </view>
+</view>
+<view class="username" wx:if="{{ author != null }}">{{ author.user_nickname }}</view>
+<view class="my-tabs">
+  <van-tabs sticky border="" color="#DAA520">
+    <van-tab title="作品 {{ productionNum }}">
+      <van-grid column-num="3" border="{{ false }}" wx:if="{{ production != 0 }}">
+        <van-grid-item use-slot wx:for="{{ production }}" wx:key="key" bindtap="clickCover" data-video="{{ item }}">
+        <image
+        style="width: 122px; height: 150px;"
+        src="{{serverUrl}}{{item.video_cover}}"
+        />
+        </van-grid-item>
+      </van-grid>
+      <!-- 显示提示信息 -->
+      <view wx:if="{{ author != null && production == 0 }}" class="video-span">
+        <image class="video-bg" src="../../images/video-bg.png"></image>
+        <view>暂无相关作品</view>
+      </view>
+    </van-tab>
+    <van-tab title="喜欢 {{ like }}">
+      <van-grid column-num="3" border="{{ false }}" wx:if="{{ like != 0 }}">
+        <van-grid-item use-slot wx:for="{{ likeVideoList }}" wx:key="key" bindtap="clickCover" data-video="{{ item }}">
+        <image
+        style="width: 122px; height: 150px;"
+        src="{{serverUrl}}{{item.video_cover}}"
+        />
+        </van-grid-item>
+      </van-grid>
+      <!-- 显示提示信息 -->
+      <view wx:if="{{ like == 0 }}" class="video-span"> 
+        <image class="video-bg" src="../../images/video-bg.png"></image>
+        <view>暂无喜欢的作品</view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>
+<!-- 在页面内添加对应的节点 -->
+<van-toast id="van-toast" />
+<van-notify id="van-notify" />

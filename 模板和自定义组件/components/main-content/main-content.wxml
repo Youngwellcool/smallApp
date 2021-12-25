@@ -1,0 +1,4 @@
+<!--components/main-content/main-content.wxml-->
+<view style="padding-top: {{height}}rpx">
+  <slot></slot>
+</view>

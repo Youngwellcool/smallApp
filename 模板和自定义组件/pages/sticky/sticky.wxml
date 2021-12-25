@@ -1,0 +1,10 @@
+<!--pages/sticky/sticky.wxml-->
+
+<view class='ee'>
+  <view class='h1'></view>
+  <!-- <view> -->
+  <view class='content'>发大水发</view>
+  <!-- </view> -->
+  
+  <view class='h2'></view>
+</view>

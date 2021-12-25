@@ -1,0 +1,7 @@
+<template name="msgItem">
+    <view>
+        <text>{{index}}：{{msg}}</text>
+        <text>{{time}}</text>
+    </view>
+    <view bindtap="click">fdasfdsfdas</view>
+</template>

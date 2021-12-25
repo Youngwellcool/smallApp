@@ -1,0 +1,24 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "index/index",
+          "pathName": "compontentPage/compontentPage",
+          "query": "paramsA=34",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

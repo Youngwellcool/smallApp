@@ -1,0 +1,6 @@
+.my-component {
+    text-align: center;
+    padding: 100rpx 0;
+    color: #888;
+    font-size: 40rpx;
+}

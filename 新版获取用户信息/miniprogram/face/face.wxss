@@ -1,0 +1,18 @@
+/*#pusher {
+    margin: 0 auto;
+    width: 300px;
+    height: 225px;
+}*/
+.tips {
+    margin: 50rpx 0;
+    text-align: center;
+    color: #f00;
+    font-size: 40rpx;
+}
+.camera {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 100%;
+}

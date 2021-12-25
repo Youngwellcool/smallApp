@@ -1,0 +1,25 @@
+
+
+<!-- 自定义导航栏 组件 -->
+
+<view class='nav-wrap' style='height: 44px;padding-top: {{height}}px;line-height: 44px;'>
+    <!-- // 导航栏 中间的标题 -->
+  <view class='nav-title'>{{navbarData.title}}</view>
+  <view>
+      <!-- // 导航栏  左上角的返回按钮 和home按钮 -->
+      <!-- //  其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
+    <view class='nav-capsule' style="top: {{height+6}}px" wx:if='{{navbarData.showCapsule}}'>
+       <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示 -->
+       <!-- //从分享进入小程序时 返回上一级按钮不应该存在 -->
+      <view bindtap='_navback' wx:if='{{showBack}}'>
+        <image src='/assets/img/down_point.png' mode='aspectFill' class='back-pre'></image>
+      </view>
+      <view class='navbar-v-line' wx:if='{{showBack}}'></view>
+      <view bindtap='_backhome'>
+        <image src='/assets/img/iconfont-home-active.png' mode='aspectFill' class='back-home'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 占位  nav-wrap设置了fiexd，需要占位元素placeholder来撑开导航栏，这样正文内容就不会被导航栏盖住了，而且不用每个页面去设置padding-top-->
+<view class='placeholder' style='height: {{height + 44}}px'></view>

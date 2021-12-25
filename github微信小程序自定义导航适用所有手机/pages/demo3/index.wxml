@@ -1,0 +1,8 @@
+<view class='main-wraper'>
+    <navBar  background='#fff' back="{{true}}" bindback="handlerGobackClick">
+      <view slot='center' bindtap='center'>fdasfd</view>
+    </navBar>
+    <view class='main'>
+        <view class='p'>详情页</view>
+    </view>
+</view>

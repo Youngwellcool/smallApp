@@ -1,0 +1,20 @@
+<wxs module="test" src="./nearby.wxs"></wxs>
+
+<swiper class="swiper" data-width="{{windowWidth}}" data-imgsize="{{imgSize}}" bindchange='{{test.change}}' bindanimationfinish="{{test.animationFinish}}" bindtransition="{{test.func}}" indicator-dots="{{indicatorDots}}"
+  autoplay="{{true}}" interval="{{interval}}" circular='' duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item style="height:100%;">
+      <image src="{{item}}" class="slide-image" style="height:100%;width:100%;" mode="center" height="300"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view style="padding: 20rpx">WXS 运行在视图层（Webview），里面的逻辑毕竟能做的事件比较少，需要有一个机制和逻辑层（App Service）开发者的代码通信，上面的 callMethod 是 WXS 里面调用逻辑层（App Service）开发者的代码的方法，而 WxsPropObserver 是逻辑层（App Service）开发者的代码调用 WXS 逻辑的机制。
+WXS 运行在视图层（Webview），里面的逻辑毕竟能做的事件比较少，需要有一个机制和逻辑层（App Service）开发者的代码通信，上面的 callMethod 是 WXS 里面调用逻辑层（App Service）开发者的代码的方法，而 WxsPropObserver 是逻辑层（App Service）开发者的代码调用 WXS 逻辑的机制。
+
+使用方法WXS 运行在视图层（Webview），里面的逻辑毕竟能做的事件比较少，需要有一个机制和逻辑层（App Service）开发者的代码通信，上面的 callMethod 是 WXS 里面调用逻辑层（App Service）开发者的代码的方法，而 WxsPropObserver 是逻辑层（App Service）开发者的代码调用 WXS 逻辑的机制。
+
+使用方法WXS 运行在视图层（Webview），里面的逻辑毕竟能做的事件比较少，需要有一个机制和逻辑层（App Service）开发者的代码通信，上面的 callMethod 是 WXS 里面调用逻辑层（App Service）开发者的代码的方法，而 WxsPropObserver 是逻辑层（App Service）开发者的代码调用 WXS 逻辑的机制。
+
+使用方法WXS 运行在视图层（Webview），里面的逻辑毕竟能做的事件比较少，需要有一个机制和逻辑层（App Service）开发者的代码通信，上面的 callMethod 是 WXS 里面调用逻辑层（App Service）开发者的代码的方法，而 WxsPropObserver 是逻辑层（App Service）开发者的代码调用 WXS 逻辑的机制。
+
+使用方法</view>

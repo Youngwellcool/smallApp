@@ -1,0 +1,16 @@
+<view class='outer' >
+    <view class='inner'>
+        <movable-area>
+            <block wx:for="{{data}}">
+                <view class='item'  id="{{item.index}}" data-index='{{index}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm'>
+                    <text>{{item.index}}</text>
+                </view>
+            </block>
+            <movable-view x="{{x}}" y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}" disabled="{{disabled}}">
+                <view class='item-move' hidden='{{hidden}}'>
+                </view>
+            </movable-view>
+        </movable-area>
+    </view>
+    <view bindtap="add">add</view>
+</view>

@@ -1,0 +1,35 @@
+<view>
+  <view class='hr'></view>
+  <view class="feedback-wrap">
+    <text class='title'>反馈问题类型</text>
+    <view class='types-wrap'>
+      <!-- <checkbox-group name="checkbox" >
+          <label bindtap='chooseType' wx:for="{{types}}" wx:key="*this" wx:for-index="index" data-index="{{index}}" data-id="{{item.id}}" class='{{type==item.id?"is_checked":""}}'>
+              <checkbox value="{{item.id}}" data-val="{{item.name}}" hidden='false' checked='{{item.checked}}'/>{{item.name}}
+          </label>
+      </checkbox-group> -->
+          <view bindtap='chooseType' wx:for="{{types}}" wx:key="*this" wx:for-index="index" data-index="{{index}}" data-id="{{item.id}}" class='type-item {{type==item.id?"checked":""}}'>
+              {{item.name}}
+          </view>
+    </view>
+    <view class='content-wrap'>
+      <textarea bindinput='textarea' value='' maxlength="200" placeholder='请输入您所遇到的问题或者建议' placeholder-style='font-size: 32rpx;'></textarea>
+      <view class='img-wrap'>
+        <view class='img-item' wx:for="{{images}}" wx:key>
+          <image mode='scaleToFill' src="{{item}}" bindtap='prevImg' data-index="{{index}}"></image>
+          <text class='iconfont icon-shanchu del' bindtap='delImg' data-index="{{index}}"></text>
+        </view>
+        <view class='add-img' bindtap='chooseImg'>
+          <text>+</text>
+        </view>
+      </view>
+      <input placeholder='请留下手机号码以便与您取得联系' bindinput='input' placeholder-style='font-size: 32rpx;' type="number" maxlength="11"></input>
+    </view>
+  </view>
+</view>
+<view class=''>
+  <button bindtap='muiltSubmit'>批量提交图片</button>
+</view>
+<view class='btn-wrap'>
+  <button bindtap='submit'>提交</button>
+</view>

@@ -1,0 +1,65 @@
+/* 第一个格子输入框 */
+
+.container .b-l-n {
+  border-left: none;
+}
+
+.pay-box {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #cfd4d3;
+}
+
+/* 支付密码框聚焦的时候 */
+
+.focus-border {
+  border-color: #0c8;
+}
+
+/* 单个格式样式（聚焦的时候） */
+.password-box {
+  flex: 1;
+  border: 1px solid #0c8;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 模拟光标 */
+
+.cursor {
+  width: 2rpx;
+  height: 36rpx;
+  background-color: #0c8;
+  animation: focus 1.2s infinite;
+}
+
+/* 光标动画 */
+
+@keyframes focus {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* 模拟输入的password的黑点 */
+
+.input-black-dot {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* 输入框 */
+
+.hidden-input {
+  margin-top: 200rpx;
+  position: relative;
+}

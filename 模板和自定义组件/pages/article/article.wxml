@@ -1,0 +1,86 @@
+<view class="article">
+    <!--封面-->
+    <view class="tl-contentarea-text">
+        <view class="tl-text-img">
+            <view class="upload_container">
+                <!--用来存放封面图片-->
+                <view class="uploader-list">
+                    <image src="{{coverImg?coverImg:''}}" mode="scaleToFill"></image>
+                </view>
+                <!--上传封面input-->
+                <view id="filePicker-0" class="filePicker webuploader-container" bindtap="chooseCoverImg">
+                    <view class="webuploader-pick">
+                        <text class="y-xzmfan">添加封面</text>
+                    </view>
+                </view>
+            </view>
+            <view class="tl-headline" catchtap="edit" data-type="1">
+                <block wx:if="{{!title}}">
+                    <text class="iconfont icon-qianbi"></text>点击设置标题
+                </block>
+                <block wx:else>{{title}}</block>
+            </view>
+        </view>
+    </view>
+
+    <view class="article-box">
+        <block wx:for="{{articleList}}">
+            <view wx:if="{{index==0}}" class="add-icon iconfont icon-tianjia" data-type="up" data-index="0" bindtap="add"></view>
+            <view
+                  disable-scroll="true"
+                  data-index="{{index}}"
+                  data-main="{{mainx}}"
+                  class="main item {{mainx === index? 'mainmove':'mainend'}}"
+                  style="left:{{start.x}}px; top:{{start.y}}px">
+                <view class="img-wrap">
+                    <text class="iconfont icon-shanchu" hidden="{{!item.img}}" data-index="{{index}}" catchtap="delImg"></text>
+                    <image src="{{item.img?item.img:'../../images/logo.png'}}" data-index="{{index}}" catchtap="chooseImg" mode="scaleToFill"></image>
+                </view>
+
+                <view catchtap="edit" data-type="2" data-index="{{index}}" class="label {{item.content?'':'no-word'}}" >{{item.content?item.content:'点击编辑文本……'}}</view>
+                <!--<view class="label">编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本</view>-->
+                <view class="icon-wrap" hidden="{{articleList.length==1}}">
+                    <view class="iconfont icon-del" data-index="{{index}}" catchtap="delItem"></view>
+                    <view class="iconfont icon-yidong"></view>
+                </view>
+            </view>
+            <view class="add-icon iconfont icon-tianjia" bindtap="add" data-type="down" data-index="{{index+1}}"></view>
+        </block>
+        <!--<block>
+            <view class="item">
+                <view class="img-wrap">
+                    <text class="iconfont icon-shanchu"></text>
+                    <image src="../../images/logo.png" mode="aspectFit"></image>
+                </view>
+
+                &lt;!&ndash;<view class="label">{{item.content?item.content:'编辑文本……'}}</view>&ndash;&gt;
+                <view class="label">编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本</view>
+                <view class="icon-wrap">
+                    <view class="iconfont icon-del"></view>
+                    <view class="iconfont icon-yidong"></view>
+                </view>
+            </view>
+            <view class="add-icon iconfont icon-tianjia"></view>
+        </block>
+        <block>
+            <view class="item">
+                <view class="img-wrap">
+                    <text class="iconfont icon-shanchu"></text>
+                    <image src="../../images/logo.png" mode="aspectFit"></image>
+                </view>
+
+                &lt;!&ndash;<view class="label">{{item.content?item.content:'编辑文本……'}}</view>&ndash;&gt;
+                <view class="label">编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本编辑文本</view>
+                <view class="icon-wrap">
+                    <view class="iconfont icon-del"></view>
+                    <view class="iconfont icon-yidong"></view>
+                </view>
+            </view>
+            <view class="add-icon iconfont icon-tianjia"></view>
+        </block>-->
+
+    </view>
+</view>
+
+<button bindtap="save">保存</button>
+<canvas canvas-id="attendCanvasId" style="width:{{cw}}px;height:{{ch}}px;"></canvas>

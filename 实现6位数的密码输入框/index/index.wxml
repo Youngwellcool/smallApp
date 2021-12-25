@@ -1,0 +1,4 @@
+<view style='text-align:center;margin-top:200rpx;'>
+  <view style='margin-bottom:50rpx'>请输入支付密码</view>
+  <pay-box bind:initData="initData" />
+</view>

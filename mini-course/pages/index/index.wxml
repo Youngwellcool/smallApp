@@ -1,0 +1,113 @@
+<!--index.wxml-->
+<view class="videoBox">
+    <van-icon name="search" color="white" bind:click="btnSearch"
+              custom-style="z-index:10;position:fixed;margin-left:3%;margin-top:100rpx;" size="25px"/>
+    <view class="video {{touch==true? 'transfrom' : '' }}" style="transform:translateY(-{{current*100}}%);"
+          bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend' bindtouchcancel='touchcancel'>
+        <view wx:for="{{videoList}}" class='videoitem' wx:key="{{item}}">
+            <video src="{{item.playURL}}" id="videoplayer" data-id="{{item.id}}" bindtimeupdate="videoUpdate"
+                   bindtap='videoTap' wx:if="{{current==index}}" object-fit="contain" loop='{{true}}'
+                   autoplay='{{true}}' custom-cache="{{true}}" controls='{{false}}' show-progress="{{false}}"
+                   show-fullscreen-btn="{{false}}" show-play-btn="{{false}}"
+                   show-center-play-btn="{{false}}" enable-progress-gesture="{{false}}"
+                   vslide-gesture-in-fullscreen="{{false}}" poster="{{ serverUrl }}{{item.cover}}" bindplay="videoPlay">
+            </video>
+            <!-- <image src="{{ serverUrl }}{{item.cover}}" class="preImage" mode='aspectFit'  lazy-load="{{true}}" wx:else></image> -->
+            <!-- 右侧区域  -->
+            <view class='btnBox {{switchTo?"show":"hide"}}'>
+                <view class='btnTx' bindtap='btnAuthor' data-id="{{ item.uid }}">
+                    <!-- 未登录时的授权按钮[透明] -->
+                    <van-button wx:if="{{ userInfo == null }}" round type="default"
+                                custom-style="width:85rpx;height:40px;float:left;position:fixed;margin-left:8rpx;border:0;"
+                                open-type="getUserInfo" bindgetuserinfo="onGotUserInfo"></van-button>
+                    <image class='TX' src='{{ serverUrl }}{{item.avatar}}'></image>
+                    <!-- <image class='followAdd {{isFollow==0?"show":"hide"}}' src='../../img/followAdd.png'></image> -->
+                </view>
+                <view class='btnLike' bindtap='btnLike' data-id="{{ item.id }}">
+                    <!-- 未登录时的授权按钮[透明] -->
+                    <van-button wx:if="{{ userInfo == null }}" round type="default"
+                                custom-style="width:85rpx;height:40px;float:left;position:fixed;margin-left:8rpx;border:0;"
+                                open-type="getUserInfo" bindgetuserinfo="onGotUserInfo"></van-button>
+                    <image src='../../images/{{isLike==1?"like-b":"like-a"}}.png'></image>
+                    <!-- <text>喜欢</text> -->
+                </view>
+                <!-- 未登录时的授权按钮[透明] -->
+                <van-button wx:if="{{ userInfo == null }}" round type="default"
+                            custom-style="width:85rpx;height:40px;float:left;position:fixed;margin-left:8rpx;border:0;"
+                            open-type="getUserInfo" bindgetuserinfo="onGotUserInfo"></van-button>
+                <view class='btnReview {{oneself?"hide":"show"}}' bindtap='btnReview' data-id="{{ item.id }}">
+                    <image src='../../images/review.png'></image>
+                    <!-- <text>评论</text> -->
+                </view>
+                <view>
+                    <button class='btnShare' open-type='share'>
+                        <image src='../../images/share.png'></image>
+                        <!-- <text>分享</text> -->
+                    </button>
+                </view>
+
+            </view>
+            <!-- 描述  -->
+            <view class='describe {{switchTo?"show":"hide"}}'>
+                <view class='nameAddr clearfix'>
+                    <text class='fl' style="margin-right:10rpx">@{{item.user_nickname}}</text>
+                    <!-- <view class='fl addr clearfix'>
+                      <image class='fl' src='../../images/share.png'></image>
+                      <text class='fl'>1111</text>
+                    </view> -->
+                </view>
+                <!-- <text class="descText">2222</text> -->
+            </view>
+            <view class="video-name-div">
+                <van-notice-bar backgroundColor="transparent" color="white"
+                                left-icon="../../../images/star.png"
+                                text="{{ item.video_name }}"
+                />
+            </view>
+            <!-- 播放暂停图标 请换成自己的路径 -->
+            <image class="playImg" src="../../images/play.png" wx:if="{{play}}" bindtap='videoTap'></image>
+            <!-- 进度条 -->
+            <slider class='{{switchTo?"show":"hide"}}' bindchange="sliderChange" bindchanging="sliderChanging" step="1"
+                    block-size='{{12}}' value="{{sliderValue}}" backgroundColor="#797979" activeColor="#fff"
+                    disabled="{{ true }}" block-color="#797979"/>
+        </view>
+    </view>
+</view>
+<view style="position: absolute;width:100%;">
+    <van-cell-group>
+        <van-field
+                value="{{ phone }}"
+                label="手机号"
+                placeholder="请输入手机号"
+                error-message="手机号格式错误"
+                border="{{ false }}"
+        />
+    </van-cell-group>
+</view>
+<view class="review-div">
+    <van-action-sheet round show="{{ show }}" title="精彩评论" bind:close="onClose">
+        <view class="review-div-view" wx:if="{{ reviewList.length > 0 }}">
+            <view class="review-div-list" wx:for="{{ reviewList }}" wx:key="{{item}}">
+                <view class="review-detail-left">
+                    <image class="review-avatar" src="{{ serverUrl }}{{ item.avatar}}"></image>
+                </view>
+                <view class="review-detail-right">
+                    <view class="review-detail-right-nickname">{{ item.user_nickname }}</view>
+                    <text>{{ item.review }}</text>
+                </view>
+            </view>
+        </view>
+        <view wx:else class="review-div-view">
+            <view class="not-review-view">还没有评论~</view>
+        </view>
+        <view class='commentInput'>
+            <input class='input' maxlength='-1' value="{{review}}" bindfocus="inputFocus" focus='{{focusInput}}'
+                   bindblur="inputBlur" bindinput="inputReview" placeholder="友善的内容是交流的起点..."></input>
+            <button class='send' bindtap="sendReview">发送</button>
+        </view>
+
+    </van-action-sheet>
+</view>
+<van-toast id="van-toast"/>
+<van-dialog id="van-dialog"/>
+<van-notify id="van-notify"/>

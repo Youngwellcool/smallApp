@@ -1,0 +1,11 @@
+<view wx:if="{{visible}}" class="skeletons-container {{visible ? 'opacity' : ''}}" style="width:100%;height:{{systemInfo.height}}px;left:{{systemInfo.left}}px;top:{{systemInfo.top}};background:{{background}}">
+  <block wx:if="{{rectList.length}}">
+    <view wx:for="{{rectList}}" wx:key="{{index}}" class="skeletons-rect skeletons-graph {{skt_animation}}" style="width:{{item.width}}px;height:{{item.height}}px;left:{{item.left}}px;top:{{item.top}}px;"></view>
+  </block>
+  <block wx:if="{{circleList.length}}">
+    <view wx:for="{{circleList}}" wx:key="{{index}}" class="skeletons-circle skeletons-graph {{skt_animation}}" style="width:{{item.width}}px;height:{{item.height}}px;left:{{item.left}}px;top:{{item.top}}px;border-radius:{{item.width}}px;"></view>
+  </block>
+  <block wx:if="{{isLoading}}">
+    <image src="https://qiniu-image.qtshe.com/20190925loading.gif" class="loading-img" />
+  </block>
+</view>

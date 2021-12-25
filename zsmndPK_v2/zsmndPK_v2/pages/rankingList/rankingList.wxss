@@ -1,0 +1,123 @@
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome {
+  margin-left: 317rpx;
+  margin-top: 8rpx;
+}
+
+/* 橡皮擦图片 */
+.eraser image {
+  width: 112rpx;
+  height: 113rpx;
+  position: absolute;
+  top: 582rpx;
+  left: 0;
+  z-index: 5;
+}
+
+/* 书夹图片 */
+.book_end image {
+  width: 109rpx;
+  height: 105rpx;
+  position: absolute;
+  top: 320rpx;
+  right: 0;
+  z-index: 5;
+}
+
+/* 左手图片 */
+.left_hand image {
+  width: 218rpx;
+  height: 294rpx;
+  position: absolute;
+  bottom: 60rpx;
+  left: 0;
+  z-index: 5;
+}
+
+/* 右手图片 */
+.right_hand image {
+  width: 223rpx;
+  height: 334rpx;
+  position: absolute;
+  bottom: 117rpx;
+  right: -80rpx;
+  z-index: 5;
+}
+
+/* 答题区域 */
+
+.major {
+  width: 600rpx;
+  height: 900rpx;
+  position: absolute;
+  top: 130rpx;
+  left: 83rpx;
+}
+
+.rankend {
+  /* margin-top: 57rpx; */
+    margin-top: 7rpx;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.ranking {
+  width: 500rpx;
+  height: 94rpx;
+  display: flex;
+}
+
+.placing image {
+  width: 40rpx;
+  height: 54rpx;
+}
+
+.head_sculpture image {
+  width: 95rpx;
+  height: 94rpx;
+  border-radius: 50%;  
+  margin-left: 34rpx;
+}
+
+.naem  {
+  margin-left: 45rpx;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.examine {
+  width: 100rpx;
+  height: 57rpx;
+  margin-left: 10rpx;
+  border-radius: 9rpx;
+  background: #bb5341;
+}
+/* 载入更多 */
+.loading{
+  font-size: 32rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 35rpx;
+  left: 277rpx;
+  color: white;
+}
+/* 圆圈 */
+.yuan{
+  background: url('https://ysm.onedisme.com/dayimage/simulation/ranking.png');
+  width:39rpx;
+  height:39rpx;
+  background-size: 100% 100%;
+  font-size:30rpx;
+  font-family:PingFangSC-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:39rpx;
+  text-align: center;
+}

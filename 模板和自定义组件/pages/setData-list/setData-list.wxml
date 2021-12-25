@@ -1,0 +1,19 @@
+
+<wxs module="util">
+  function reverseArr(arr) {
+    return arr.reverse()   // 在wxs中定义一个反转数组的方法，以便在wxml中使用
+  }
+  module.exports = {
+    reverseArr: reverseArr
+  }
+</wxs>
+<!-- <wxs module="util" src="../../utils/util.wxs"></wxs> -->
+<view>
+  <view wx:for="{{util.reverseArr(pullDownList)}}" wx:for-item="listItem" wx:key="{{listItem}}">
+    <view class='item' wx:for="{{util.reverseArr(listItem)}}" wx:key="{{item}}">{{item.num}}</view>
+  </view>
+
+  <view wx:for="{{list}}" wx:for-item="listItem" wx:key="{{listItem}}">
+    <view class='item' wx:for="{{listItem}}" wx:key="{{item}}">{{item.num}}</view>
+  </view>
+</view>

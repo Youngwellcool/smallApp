@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/attention/attention",
+    "pages/information/information",
+    "pages/my/my",
+    "pages/author/author",
+    "pages/scan/scan",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/settings/settings"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "优淘小课",
+    "navigationBarTextStyle": "white"
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backgroundColor": "#000000",
+    "color": "#ffffff",
+    "list": [
+      {
+        "text": "首页",
+        "selectedColor": "#A87DFF",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/video.png",
+        "selectedIconPath": "images/video-selected.png"
+      },
+      {
+        "text": "关注",
+        "selectedColor": "#d4237a",
+        "pagePath": "pages/attention/attention",
+        "iconPath": "images/attention.png",
+        "selectedIconPath": "images/attention-selected.png"
+      },
+      {
+        "text": "资讯",
+        "selectedColor": "#3358CE",
+        "pagePath": "pages/information/information",
+        "iconPath": "images/information.png",
+        "selectedIconPath": "images/information-selected.png"
+      },
+      {
+        "text": "我的",
+        "selectedColor": "#d4237a",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-selected.png"
+      }
+    ]
+  }
+}

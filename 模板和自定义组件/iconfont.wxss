@@ -1,0 +1,78 @@
+
+@font-face {
+    font-family: 'iconfont';  /* project id 895147 */
+    src: url('//at.alicdn.com/t/font_895147_ferfvv1r73.eot');
+    src: url('//at.alicdn.com/t/font_895147_ferfvv1r73.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_895147_ferfvv1r73.woff') format('woff'),
+    url('//at.alicdn.com/t/font_895147_ferfvv1r73.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_895147_ferfvv1r73.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:36rpx;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bianji4:before { content: "\e617"; }
+
+.icon-video:before { content: "\e608"; }
+
+.icon-iconfonticontrianglecopy:before { content: "\e630"; }
+
+.icon-a:before { content: "\e681"; }
+
+.icon-icon-class-a:before { content: "\e652"; }
+
+.icon-jiaolian1:before { content: "\e69d"; }
+
+.icon-xuanzegouxuanzhuangtaishangpinxiangqing:before { content: "\e67a"; }
+
+.icon-move2:before { content: "\e606"; }
+
+.icon-gouxuan:before { content: "\e604"; }
+
+.icon-close:before { content: "\e65d"; }
+
+.icon-wenhao:before { content: "\e665"; }
+
+.icon-touxiang:before { content: "\e602"; }
+
+.icon-shanchu:before { content: "\e625"; }
+
+.icon-dianhua:before { content: "\e61b"; }
+
+.icon-daochu-tianchong:before { content: "\e63e"; }
+
+.icon-qiehuan:before { content: "\e603"; }
+
+.icon-xingbie-nan:before { content: "\e615"; }
+
+.icon-xingbie-nv:before { content: "\e616"; }
+
+.icon-yidong:before { content: "\e661"; }
+
+.icon-qianbi:before { content: "\e66b"; }
+
+.icon-gouxuan02:before { content: "\e6c8"; }
+
+.icon-yidong1:before { content: "\e678"; }
+
+.icon-sudian:before { content: "\e600"; }
+
+.icon-tianjia:before { content: "\e607"; }
+
+.icon-Magnifier:before { content: "\e62d"; }
+
+.icon-tishi:before { content: "\e60e"; }
+
+.icon-quyu:before { content: "\e605"; }
+
+.icon-picture-delet:before { content: "\e612"; }
+
+.icon-del:before { content: "\e601"; }
+
+.icon-weibiaoti--:before { content: "\e620"; }
+

@@ -1,0 +1,51 @@
+<view class='home'>
+  <view class='certificate'>
+    <view class='qualified bold font40 title'>
+      <text>专业考试合格证</text>
+    </view>
+    <view class='eligibility overall'>
+      <view class='specialty'>
+        <view class='shcool across_center font30 title' style='margin-top: 25rpx'>
+          <text>{{schoolName}}2018年艺术类本科专业</text>
+        </view>
+        <view class='message'>
+          <view class='album'>
+            <image src='{{faceimg}}'></image>
+          </view>
+          <view class='basic_document font30 title'>
+            <text style='margin-top: 15rpx;'>姓名：{{name}}</text>
+            <text style='margin-top: 13rpx;'>性别：{{sex}}</text>
+            <text style='margin-top: 13rpx;'>省份：{{province}}</text>
+          </view>
+        </view>
+        <view class='matriculate across_center'>
+          <image src='/images/heading.png'></image>
+        </view>
+        <view class='code across_center'>
+          <image src='/images/erweima.png'></image>
+        </view>
+        <view class='score across_center font30 ink_red' bindtap='score'>
+          <text>查看成绩</text>
+        </view>
+        <view class='recur'>
+          <button class='linear' bindtap='onceMore'>再来一次
+          </button>
+          <button class='keep' bindtap='generate'>保存图片
+          </button>
+          <button open-type="share" class='share overall'> 分享
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 保存绘画图片 -->
+<canvas wx:if="{{previewHidden}}" hidden="{{reply}}" canvas-id='shareImg' class='survival'></canvas>
+<view wx:if="{{previewHidden}}" class='preview center'>
+  <view class='center'>
+    <image src='{{preurl}}' mode='widthFix' class='previewImg'></image>
+    <button class='font32' bindtap='shareSave'>保存</button>
+  </view>
+</view>
+

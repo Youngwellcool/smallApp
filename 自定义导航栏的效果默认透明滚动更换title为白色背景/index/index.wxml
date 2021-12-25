@@ -1,0 +1,31 @@
+
+<navigate-title title="兼职详情"  isActive="{{flag}}"/>
+<import src="../wxParse/wxParse.wxml" />
+<view>
+  <image class="top-banner" src="https://qiniu-image.qtshe.com/1557133211411_684.jpg" mode="widthFix" />
+  <view class="resourse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+
+<image mode="heightFix" class="img" src="https://qiniu-image.qtshe.com/1557133211411_684.jpg"/>
+
+<view class='img-bg' style="background-image:url('https://qiniu-image.qtshe.com/1557133211411_684.jpg')"></view>
+
+<button class="foot-btn" bindtap="handleClick">点我吧</button>
+
+<!-- 报名弹窗 -->
+<view class="apply-window" wx:if="{{isShow}}">
+  <view class="shadow" catchtouchmove="preventTouchMove" bindtap="handleClick"></view>
+  <view class="content" catchtouchmove="preventTouchMove">
+    <view class="head-info">
+      <text class="title">给商家留言</text>
+    </view>
+    <view class="msg-content" catchtouchmove="preventTouchMove">
+      <textarea placeholder="展示你很适合这份工作的留言，录取率可提高20%噢" maxlength="140" cursor-spacing="150"/>
+    </view>
+    <view class="applys" catchtap="handleClick">
+      <text>极速报名</text>
+    </view>
+  </view>
+</view>

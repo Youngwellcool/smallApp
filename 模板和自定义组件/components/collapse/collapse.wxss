@@ -1,0 +1,147 @@
+page {
+    background-color: #f1f1f1;
+}
+.top {
+    position: relative;
+    margin-bottom: 20rpx;
+    padding: 30rpx 0;
+    background-color: #fff;
+    text-align: center;
+}
+.top .date-pick {
+    position: absolute;
+    top: 40rpx;
+    right: 40rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+.top .canvas-wrap {
+    width:400rpx;
+    height:400rpx;
+    margin:0 auto;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.canvas-wrap .mark-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+.top .canvas-wrap .mark-text view {
+    line-height: 40rpx;
+    font-size: 56rpx;
+    color: #3780F3;
+}
+.top .canvas-wrap text{
+    font-size: 22rpx;
+    color:#999;
+
+}
+
+.data-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 160rpx;
+    justify-content: space-between;
+}
+.data-container .item {
+
+    margin-top: 40rpx;
+    text-align: center;
+    color: #565656;
+}
+.data-container .item .number {
+    line-height: 0.5;
+    font-size: 40rpx;
+    /* color: #262628; */
+}
+.data-container .item .label {
+    font-size: 30rpx;
+    /* color: #B0B0B1; */
+}
+
+.detail-wrap {
+    background-color: #fff;
+}
+.item-list {
+    border-bottom: 2rpx solid #ddd;
+}
+.item-list .weui-cell__bd {
+    font-size: 30rpx;
+}
+.list-wrap {
+    padding: 0 15px;
+    height: 0;
+    overflow: hidden;
+}
+.item.active .list-wrap {
+    height: auto;
+}
+.box-item {
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #ddd;
+}
+/* .box-item:last-child {
+  border-bottom: 0;
+} */
+.box-item .left {
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+}
+.box-item .left .time{
+    font-size: 22rpx;
+    color: #888
+}
+
+.box-item .left .header-img {
+    margin-right: 20rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+.box-item .state {
+    font-size: 28rpx;
+    color: #888;
+}
+
+.list-wrap .list-box {
+    margin-top:0;
+    opacity:0;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%);
+    -webkit-transition:.3s;
+    transition:.3s;
+}
+.active .list-wrap .list-box {
+    opacity:1;
+    -webkit-transform:translateY(0);
+    transform:translateY(0);
+
+}
+.badge {
+    padding: 0 10rpx;
+    margin-right: 15rpx;
+    font-size: 20rpx;
+    background-color: #aaa;
+    border-radius: 50rpx;
+}
+.arrow {
+    transform: translate3d(0, -3rpx, 0) rotate(90deg);
+    transition:.3s;
+    display: inline-block;
+}
+.active .arrow {
+    transform: translate3d(0, 3rpx, 0) rotate(-90deg);
+}
+.date-pick .arrow {
+    transform: translate3d(0, -13rpx, 0) rotate(90deg);
+}
+.date-pick.active .arrow {
+    transform: translate3d(0, -5rpx, 0) rotate(-90deg);
+}

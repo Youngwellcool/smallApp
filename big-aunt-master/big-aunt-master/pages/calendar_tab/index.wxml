@@ -1,0 +1,21 @@
+<view>
+  <view wx:if="{{hasSetted == false}}">
+    <commonSetting
+      bind:changesetted="changeSetted"
+      hasSetted="{{hasSetted}}"
+      durationRange="{{durationRange}}"
+      intervalRange="{{intervalRange}}"
+      whoseSetting="{{whoseSetting}}"
+      whoseHasSetted="{{whoseHasSetted}}"
+    />
+  </view>
+  <view wx:else>
+    <commonCalendar
+      id="calendar"
+      hasSetted="{{hasSetted}}"
+      durationRange="{{durationRange}}"
+      intervalRange="{{intervalRange}}"
+      whoseSetting="{{whoseSetting}}"
+    />
+  </view>
+</view>

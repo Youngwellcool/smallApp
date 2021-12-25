@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "action-sheet": "mmp-action-sheet",
+    "vant-image": "/miniprogram_npm/@vant/weapp/image/index"
+  }
+}

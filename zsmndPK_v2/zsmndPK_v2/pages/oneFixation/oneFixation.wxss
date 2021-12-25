@@ -1,0 +1,118 @@
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+/* 图片的定位 */
+.shield_hand{
+  width: 218rpx;
+  height: 294rpx;
+  position: absolute;
+  left: -95rpx;
+  bottom: 40rpx;
+  z-index: 99;
+}
+.right_hand{
+  width: 223rpx;
+  height: 334rpx;
+  position: absolute;
+  right: -83rpx;
+  bottom: 221rpx;
+  z-index: 99;
+}
+.pen{
+  width: 693rpx;
+  height: 164rpx;
+  position: absolute;
+  right: 32rpx;
+  bottom: -90rpx;
+  z-index: 99;
+}
+
+.major {
+  width: 727rpx;
+  /* height: 1079rpx; */
+  height: 100%;
+}
+
+.headline {
+  width: 100%;
+  margin-left: 123rpx;
+  margin-top: 97rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.hierarchy {
+  width: 727rpx;
+  height: 781rpx;
+  position: absolute;
+  top: 203rpx;
+  left: 0;
+  z-index: 9;
+}
+
+.choice_school {
+  width: 100%;
+  display: flex; 
+}
+
+.school image {
+  width: 364rpx;
+  height: 781rpx;
+  margin-left: 122rpx;
+}
+
+.check {
+  margin-left: 38rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .bg image {
+  width: 100%;
+  height: 995rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+} */
+.radio .school{
+  width: 364rpx;
+  height: 156rpx;
+}
+radio-group{
+  margin-left: 123rpx;
+  display: flex;
+  width: 475rpx;
+  padding-top:5rpx;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.radio{
+  display: flex;
+  width: 475rpx;
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+/* radio未选中时样式 */
+
+/* .wx-radio-input {
+height: 44rpx;
+width: 44rpx;
+background: url('https://ysm.onedisme.com/dayimage/simulation/unselected.png')no-repeat;
+background-size: 100% 100%;
+
+} */
+
+/* radio选中时样式 */
+
+/* .wx-radio-input.wx-radio-input-checked::before{
+height: 44rpx;
+width: 44rpx;
+background: url('https://ysm.onedisme.com/dayimage/simulation/pitchon.png')no-repeat;
+background-size: 100% 100%;
+} */

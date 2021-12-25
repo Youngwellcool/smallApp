@@ -1,0 +1,10 @@
+<import src="../template/template.wxml"/>
+
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar> 
+<!-- <main-content> -->
+  <view class='main'>
+    <template is="msgItem" data="{{...item2}}"></template>
+    <van-button type="info" bind:click="jump">去canvas页面</van-button>
+  </view>
+  
+<!-- </main-content> -->

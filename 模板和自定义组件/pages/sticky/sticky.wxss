@@ -1,0 +1,14 @@
+/* pages/sticky/sticky.wxss */
+.h1, .h2 {
+  height: 500px;
+}
+.h2 {
+  height: 2000px;
+}
+.content {
+  position: sticky;
+  top: 0;
+}
+/* .ee {
+  overflow: hidden;
+} */

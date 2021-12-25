@@ -1,0 +1,56 @@
+<!--pages/information/information.wxml-->
+<web-view src="{{ url }}" wx:if="{{ userInfo != null }}"></web-view>
+
+<view class="login-div" wx:if="{{ userInfo == null }}">
+  <view class="login-span">
+    <image class="video-bg" src="../../images/video-bg.png"></image>
+    <view>请登录后查看更多热门资讯</view>
+  </view>
+  <view class="login-btn">
+    <van-divider contentPosition="center" customStyle="color: #A9A9A9;border-color: #262629;font-size: 12px;">推荐登录方式</van-divider>
+    <view class="login-wechat-btn">
+      <van-button round type="primary" size="small" icon="../../../images/wechat-icon.png" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" custom-style="width:150px;">微信快速登录</van-button>
+    </view>
+    <view class="login-phone-btn">
+      <van-button round type="primary" size="small" icon="../../../images/phone-icon.png"  color="linear-gradient(to right, #4bb0ff, #6149f6)" custom-style="width:150px;" bind:click="showPopup">手机号码登录</van-button>
+    </view>
+  </view>
+</view>
+<!-- 弹出登录 -->
+<van-popup round position="bottom"  show="{{ show }}" bind:close="onClose" custom-style="height: 65%;">
+  <view class="phone-login-title">手机号码快捷登录</view>
+  <view class="phone-login-div">
+    <van-cell-group>
+      <van-field
+      value="{{ phone }}"
+      label="手机号"
+      placeholder="请输入手机号"
+      error-message="{{ phoneErrorMessage }}"
+      border="{{ false }}"
+      bindchange="phoneChange" 
+      required
+    />
+
+      <van-field
+        value="{{ sms }}"
+        center
+        clearable
+        label="短信验证码"
+        placeholder="请输入短信验证码"
+        border="{{ false }}"
+        use-button-slot
+        id="sms"
+        bindchange="btnSms"
+        required
+      >
+  <van-button slot="button" size="small" type="primary" bindtap="btnVerificationCode" wx:if="{{ isSend == null}}">发送验证码</van-button>
+  <van-button disabled slot="button" size="small" type="primary" wx:if="{{ isSend != null}}">{{ times}}s后重新发送</van-button>
+    </van-field>
+  </van-cell-group>
+    <view class="phone-login-btn">
+      <van-button round size="normal" color="linear-gradient(to right, #4bb0ff, #6149f6)" bindtap="phoneLogin" custom-style="width:300px;">登录</van-button>
+    </view>
+  </view>
+</van-popup>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />

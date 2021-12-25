@@ -1,0 +1,7 @@
+<!-- <button bindtap="toLive">观看直播</button> -->
+
+<button bindtap='choose'>选点</button>
+
+<button bindtap='getLocation'>getLocation</button>
+
+<button bindtap='toqr'>生成二维码</button>

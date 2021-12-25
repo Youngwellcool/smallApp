@@ -1,0 +1,6 @@
+function reverseArr(arr) {
+  return arr.reverse()
+}
+module.exports = {
+  reverseArr: reverseArr
+}

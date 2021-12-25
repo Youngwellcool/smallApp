@@ -1,0 +1,26 @@
+/* pages/settings/settings.wxss */
+page{
+  background-color: #1a1a1d;
+}
+.settings-view .van-cell{
+  background-color: #1a1a1d;
+  color: white;
+}
+.settings-view .feedback{
+  width: 100%;
+  position: fixed;
+  height: 78rpx;
+  z-index: 1;
+  background: transparent;
+}
+
+.settings-view .van-cell--clickable.van-cell--hover{
+  background-color: #0f1412;
+  color: white;
+}
+.settings-view .van-icon__image{
+  width: 120%;
+  height: 120%;
+  margin-top: -2rpx;
+  margin-right: 3rpx;
+}

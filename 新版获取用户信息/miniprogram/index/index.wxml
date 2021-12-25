@@ -1,0 +1,33 @@
+<!--<view class="container">
+    <view class="userinfo">
+        <block wx:if="{{!hasUserInfo}}">
+            <block wx:if="{{!isExist}}">
+                <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" style="margin-bottom: 80rpx;"> 新版获取头像昵称并微信授权登录
+                </button>
+                <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 旧版获取头像昵称并微信授权登录</button>
+            </block>
+
+            <block wx:else>
+                <button bindtap="wxLogin">微信授权登录</button>
+            </block>
+        </block>
+
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+</view>-->
+
+<button wx:if="{{canIUseGetUserProfile}}" bindtap="start" style="margin-bottom: 80rpx;"> 开始验证
+</button>
+<button wx:else open-type="getUserInfo" bindgetuserinfo="start2"> 开始验证</button>
+
+<view class="tips" wx:if="{{not&&has}}">
+    当前登录的微信
+    <image class="userinfo-avatar wx-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    不符
+</view>
+
+<view wx:if="{{!not&&has}}" class="tips">验证通过，即将进入人脸识别系统……</view>

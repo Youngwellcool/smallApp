@@ -1,0 +1,13 @@
+{
+ "navigationBarTitleText": "热门资讯",
+ "navigationBarTextStyle": "white",
+ "navigationStyle": "custom",
+ "usingComponents": {
+  "van-toast": "vant-weapp/toast",
+  "van-button": "vant-weapp/button",
+  "van-divider": "vant-weapp/divider",
+  "van-dialog": "vant-weapp/dialog",
+  "van-popup": "vant-weapp/popup",
+  "van-field": "vant-weapp/field"
+ }
+}

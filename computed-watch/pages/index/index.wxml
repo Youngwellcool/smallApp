@@ -1,0 +1,12 @@
+<view style="colo:#f00;font-size: 40rpx">computed</view>
+<view>a: {{a}}</view>
+<view>b: {{b}}</view>
+<view>sum: {{sum}}</view>
+<button bindtap="tap">改变</button>
+
+
+<view style="colo:#f00;font-size: 40rpx">watch</view>
+<view>aa: {{aa}}</view>
+<view>bb: {{bb}}</view>
+<view>sum2: {{sum2}}</view>
+<button bindtap="taps">改变</button>

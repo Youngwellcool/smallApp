@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<import src="../template/template.wxml"/>
+
+<!-- 加 号 -->
+<view class="item-add">
+  <view class="item-plus"></view>
+</view>
+
+
+<!-- // 引入自定义导航组件。给导航组件中的nvabarData传入nvabarData -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<!-- <main-content> -->
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <navigator class='btn' open-type="navigate" url='../canvas-image/canvas-image'>去canvas转图片页面</navigator>
+  <navigator class='btn' open-type="navigate" url='../canvas-demo/canvas-demo'>去canvas-demo页面</navigator>
+  <navigator class='btn' open-type="navigate" url="../a/a">点击去a页面</navigator>
+  <navigator class='btn' open-type="navigate" url="../rich-new/rich-new">点击去rich-new页面</navigator>
+  <navigator class='btn' open-type="navigate" url="../sticky/sticky">点击去sticky页面</navigator>
+  
+  <template is="msgItem" data="{{...item}}"></template>
+<navigator class='btn' open-type="navigate" url="../setData-list/setData-list">去setData操作巨大的list页面</navigator>
+  <text>自定义组件</text>
+  <my-component msg="{{item.msg}}"></my-component>
+  <van-button 
+    type="danger"
+    bind:click="showPopup">vant按钮</van-button>
+  <van-popup
+    show="{{show}}"
+    position="right"
+    custom-class="right"
+    custom-style="background: #f00"
+    overlay-style="background: rgba(145,55,55,.4)"
+    bind:close="onClose">内容</van-popup>
+    <view>web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。web-view 组件是一个可以用来承载网页的容器，会自动铺满整个小程序页面。个人类型的小程序暂不支持使用。</view>
+<!-- </main-content> -->
+
+<view style='background: #00f'>
+<canvas canvas-id="pieCanvas" class="canvas"></canvas>
+</view>
+
+<view class="loading-cell">
+    <view class="line-bounce">
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+    </view>
+  </view>

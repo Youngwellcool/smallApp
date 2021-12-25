@@ -1,0 +1,17 @@
+var x = 0, y = 0;
+
+function setStyle(ins) {
+  ins.selectComponent('#box').setStyle({
+    left: x + 'px',
+    top: y + 'px'
+  })
+}
+function move(e, ins) {
+  x += e.detail.deltaX;
+  y += e.detail.deltaY;
+  setStyle(ins)
+}
+
+module.exports = {
+  move: move
+}

@@ -1,0 +1,5 @@
+<!--pages/settings/settings.wxml-->
+<view class="settings-view">
+  <button class="feedback" open-type="feedback"></button>
+  <van-cell title="反馈与帮助" is-link border="{{false}}" size="large" icon="comment-o"/>
+</view>

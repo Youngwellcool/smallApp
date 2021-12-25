@@ -1,0 +1,4 @@
+<view class="my-component">
+    <view>{{msg}}</view>
+    <view bindtap="click">{{innerMsg}}</view>
+</view>

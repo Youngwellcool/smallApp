@@ -1,0 +1,44 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "list",
+          "pathName": "pages/setData-list/setData-list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "上传图片裁剪",
+          "pathName": "pages/cut-image/cut-image",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "获取用户信息",
+          "pathName": "pages/getUser/getUser",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "canvas-demo",
+          "pathName": "pages/canvas-demo/canvas-demo",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 关闭switch开关弹出提示 1、关键是要设置当开关为开时，disabled要为true；2、要使用bindtap事件而不用bindchange事件 -->
+  <switch checked='{{show}}' disabled="{{show}}" bindtap="switchChange"/>
+</view>

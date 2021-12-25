@@ -1,0 +1,220 @@
+@import "../wxParse/wxParse.wxss";
+
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f3f4f5;
+  min-height: 100vh;
+}
+
+.top-banner {
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.resourse {
+  background-color: #fff;
+  padding: 40rpx 20rpx 100rpx;
+  position: absolute;
+  top: 60vh;
+  width: 100%;
+  overflow: hidden;
+  max-width: 750rpx;
+}
+
+.foot-btn {
+  width: 100%;
+  background: #0c8;
+  color: #fff;
+  text-align: center;
+  height: 96rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  position: fixed;
+  bottom: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.apply-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+
+.shadow {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  transition: ease all 0.3s;
+}
+
+.hidetext {
+  font-size: 28rpx;
+  color: #ccc;
+  margin-left: 32rpx;
+  position: absolute;
+  margin-top: 28rpx;
+}
+
+.content {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+  background: #fff;
+  transition: ease all 0.3s;
+}
+
+.head-info {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  background: #fff;
+}
+
+.head-info .closeapply {
+  position: absolute;
+  left: 24rpx;
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 30rpx;
+}
+
+.head-info .title {
+  display: block;
+  font-size: 32rpx;
+  color: rgb(51, 51, 51);
+}
+
+.msg-content {
+  width: 100%;
+}
+
+.msg-content textarea::-webkit-input-placeholder {
+  color: rgb(204, 204, 204);
+}
+
+.msg-content textarea {
+  width: 690rpx;
+  margin: 10rpx auto 0;
+  height: 288rpx;
+  background: url(https://qiniu-image.qtshe.com/20190121textarea.png) left center / 100% 288rpx no-repeat;
+  font-size: 28rpx;
+  padding: 16rpx;
+  box-sizing: border-box;
+}
+
+.msg-content .count {
+  padding-bottom: 20rpx;
+  margin: 20rpx 40rpx 0;
+  font-size: 28rpx;
+  color: rgb(204, 204, 204);
+  text-align: right;
+  float: right;
+}
+
+.applys {
+  margin: 48rpx auto;
+  width: 93.5%;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 100rpx;
+  text-align: center;
+  /* background: linear-gradient(-90deg, rgb(0, 204, 136), rgb(111, 207, 49));
+  box-shadow: 0 2rpx 6rpx rgba(0, 204, 136, .5); */
+  background: #0c8;
+  transition: ease all 0.3s;
+}
+
+.applys text {
+  display: block;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.agreement {
+  display: block;
+  margin-bottom: 40rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.agreement text {
+  display: block;
+  font-size: 24rpx;
+  color: rgb(153, 153, 153);
+}
+
+.agreement text .underline {
+  display: inline-block;
+  color: rgb(0, 204, 136);
+  text-decoration: underline;
+}
+
+.short-line {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  content: " ";
+  width: 2rpx;
+  height: 60rpx;
+  border-right: 2rpx solid #f5f5f5;
+  color: rgb(229, 229, 229);
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+.green {
+  color: rgb(0, 204, 136);
+}
+
+.count-left {
+  padding-bottom: 24rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: rgb(153, 153, 153);
+}
+
+.fade-enter .applynum {
+  width: 400rpx;
+  margin: 0 auto;
+}
+
+.slide-up-enter, .slide-up-leave-active {
+  transform: translateY(700rpx);
+  transition: ease all 0.3s;
+}
+
+
+.img {
+  margin-top: 100rpx;
+  width: 125rpx;
+  height: 300rpx;
+  border: 2rpx solid #ddd;
+}
+.img-bg {
+  width: 125rpx;
+  height: 300rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

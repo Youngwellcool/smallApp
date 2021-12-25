@@ -1,0 +1,22 @@
+
+<view class="tips">{{msg}}</view>
+
+<!--
+<live-pusher id="pusher" url='https://domain/push_stream' mode="HD" autopush enable-mic="{{false}}" bindstatechange="statechange" bindnetstatus="status"></live-pusher>
+
+
+<button bindtap="bindStart" class="page-body-button" type="primary">播放推流</button>
+&lt;!&ndash;<button bindtap="snapshot" class="page-body-button" type="primary">拍照</button>&ndash;&gt;
+
+<image src='{{img}}'></image>
+<image src='{{base64}}'></image>-->
+
+<camera class="camera" device-position="front" flash="off" binderror="error" bindinitdone="cameraDone">
+
+</camera>
+
+<!--<button style="margin: 30rpx 0" type="warn" open-type="launchApp" app-parameter="小程序" binderror="launchAppError" bindlaunchapp="bindlaunchapp">返回APP</button>-->
+
+<button type="primary" bindtap="takePhoto">拍照</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image>

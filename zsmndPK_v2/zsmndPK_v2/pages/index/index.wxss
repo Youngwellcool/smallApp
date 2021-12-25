@@ -1,0 +1,59 @@
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+.major {
+  width: 727rpx;
+  height: 1079rpx;
+  position: relative;
+}
+
+.heading {
+  width: 451rpx;
+  height: 207rpx;
+  margin-top: 122rpx;
+  background: url('https://ysm.onedisme.com/dayimage/simulation/headingbg.png') no-repeat;
+  background-size: 451rpx 207rpx;
+}
+
+.hierarchy {
+  width: 100%;
+  height: 275rpx;
+  position: absolute;
+  top: 448rpx;
+  left: 0;
+  z-index: 9;
+}
+
+.start, .ranking {
+  width: 385rpx;
+  height: 110rpx;
+}
+
+.start {
+  background: url('https://ysm.onedisme.com/dayimage/simulation/blueness.png') no-repeat;
+  background-size: 385rpx 110rpx;
+}
+
+.ranking {
+  margin-top: 55rpx;
+  background: url('https://ysm.onedisme.com/dayimage/simulation/long.png') no-repeat;
+  background-size: 385rpx 110rpx;
+}
+
+.start button, .ranking button { 
+  width: 385rpx;
+  height: 110rpx;
+  background: transparent;
+  border: none;
+}
+
+.bg image {
+  width: 750rpx;
+  height: 801rpx;
+  position: absolute;
+  bottom: -92rpx;
+  left: -10rpx;
+  z-index: 2;
+}

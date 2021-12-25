@@ -1,0 +1,10 @@
+<view class="candle">
+	<view class="flame"></view>
+</view>
+
+<view class="candle1">
+	<text class="glow1"></text>
+	<text class="flames1"></text>
+	<text class="thread1"></text>
+</view>
+

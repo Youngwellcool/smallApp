@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "van-toast": "vant-weapp/toast",
+    "van-button": "vant-weapp/button",
+    "van-tab": "vant-weapp/tab",
+    "van-tabs": "vant-weapp/tabs",
+    "van-row": "vant-weapp/row",
+    "van-col": "vant-weapp/col",
+    "van-notice-bar": "vant-weapp/notice-bar",
+    "van-divider": "vant-weapp/divider",
+    "van-grid": "vant-weapp/grid",
+    "van-grid-item": "vant-weapp/grid-item",
+    "van-dialog": "vant-weapp/dialog",
+    "van-notify": "vant-weapp/notify",
+    "van-popup": "vant-weapp/popup",
+    "van-field": "vant-weapp/field"
+  }
+}

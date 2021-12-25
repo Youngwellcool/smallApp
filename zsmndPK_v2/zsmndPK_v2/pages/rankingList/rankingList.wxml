@@ -1,0 +1,53 @@
+<view class="home">
+  <view class='welcome upright_center bold font40 title'>
+    <text>排行榜</text>
+  </view>
+  <!-- 橡皮擦图片 -->
+  <view class='eraser'>
+    <image src='/images/rubber.png'></image>
+  </view>
+  <!-- 书夹图片 -->
+  <view class='book_end'>
+    <image src='/images/pencil_sharpener.png'></image>
+  </view>
+  <!-- 左手图片 -->
+  <view class='left_hand'>
+    <image src='/images/shield_hand.png'></image>
+  </view>
+  <!-- 右手图片 -->
+  <view class='right_hand'>
+    <image src='/images/right_hand.png'></image>
+  </view>
+  <!-- 答题区域 -->
+    <view class='major center'>
+  <scroll-view class='seniority center' scroll-y="true" style='height: 100%' scroll-top="{{scrollTop}}" bindscrolltolower="bindscrolltolower">
+  <block wx:for="{{searchSongList}}" wx:for-index="index">
+
+      <view class='rankend'>
+        <view class='ranking' style='margin-top: 21rpx'>
+          <view class='placing upright_center'>
+            <block wx:if="{{index ===0}}"><image src="{{getImagePrefixHost+'/dayimage/simulation/ranking_1.png'}}"></image></block>
+            <block wx:elif="{{index ===1}}"><image src="{{getImagePrefixHost+'/dayimage/simulation/ranking_2.png'}}"></image></block>
+            <block wx:elif="{{index ===2}}"><image src="{{getImagePrefixHost+'/dayimage/simulation/ranking_3.png'}}"></image></block>
+            <block wx:else><view class='yuan'>{{index+1}}</view> </block>
+          </view>
+          <view class='head_sculpture'>
+            <image src="{{getImagePrefixHost+'/'+item.evaluationtwo_faceimg}}"></image>
+          </view>
+          <view class='naem upright_center font40 title'>
+            <text>{{item.wx_name}}</text>
+          </view>
+        </view>
+          <view class='examine overall font30 white' bindtap='score' data-id="{{item.evaluationtwo_id}}">
+            <text>查看</text>
+          </view>
+      </view>
+  </block>
+   <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+   <view class="loading" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+</scroll-view>
+
+    </view>
+
+
+</view>

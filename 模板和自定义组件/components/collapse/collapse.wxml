@@ -1,0 +1,187 @@
+<view class="sign-wrap">
+    <view class="top">
+        <view class="canvas-wrap">
+            <canvas class="cir" style="width:100%; height:100%;" canvas-id="mycanvas" hidden="{{hiddenStudy}}">
+            </canvas>
+            <view class="mark-text">
+                <view>0/0</view>
+                <text>签到人数/应到人数</text>
+            </view>
+        </view>
+        <view class="data-container">
+            <view class="item">
+                <view class="number">0</view>
+                <text class="label">未签到</text>
+            </view>
+            <view class="item">
+                <view class="number">0</view>
+                <text class="label">迟到</text>
+            </view>
+            <view class="item">
+                <view class="number">0</view>
+                <text class="label">旷课</text>
+            </view>
+        </view>
+        <picker class="date-pick {{showPick?'active':''}}" bindtap="showDatePick" bindchange="pickeChange" bindcancel="hideDatePick" value="{{index}}" range="{{dateArray}}">
+            签到日期
+            <text class="weui-cell__ft weui-cell__ft_in-access arrow"></text>
+        </picker>
+    </view>
+
+    <view class="detail-wrap">
+        <view bindtap="toggleShow" data-index="0" class="item {{current===0?'active':''}}">
+            <view class="item-list weui-cell weui-cell_access">
+                <view class="weui-cell__bd">已签到</view>
+                <text class="badge">10</text>
+                <view class="weui-cell__ft weui-cell__ft_in-access arrow"></view>
+
+            </view>
+            <view class="list-wrap">
+                <view class="list-box">
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="toggleShow" data-index="1" class="item {{current===1?'active':''}}">
+            <view class="item-list weui-cell weui-cell_access">
+                <view class="weui-cell__bd">迟到</view>
+                <text class="badge">10</text>
+                <view class="weui-cell__ft weui-cell__ft_in-access arrow"></view>
+            </view>
+            <view class="list-wrap">
+                <view class="list-box">
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="toggleShow" data-index="2" class="item {{current===2?'active':''}}">
+            <view class="item-list weui-cell weui-cell_access">
+                <view class="weui-cell__bd">旷课</view>
+                <text class="badge">10</text>
+                <view class="weui-cell__ft weui-cell__ft_in-access arrow"></view>
+            </view>
+            <view class="list-wrap">
+                <view class="list-box">
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                    <view class="box-item">
+                        <view class="left">
+                            <image class="header-img" src="../../assets/images/avatar.png"></image>
+                            <view class="desc">
+                                <view class="name">fdasf</view>
+                                <view class="time">签到时间：2018-11-23 12:52:06</view>
+                            </view>
+                        </view>
+                        <view class="state">正常</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

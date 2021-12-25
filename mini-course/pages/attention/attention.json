@@ -1,0 +1,16 @@
+{
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "关注",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-toast": "vant-weapp/toast",
+    "van-button": "vant-weapp/button",
+    "van-divider": "vant-weapp/divider",
+    "van-dialog": "vant-weapp/dialog",
+    "van-grid": "vant-weapp/grid",
+    "van-grid-item": "vant-weapp/grid-item",
+    "van-notify": "vant-weapp/notify",
+    "van-popup": "vant-weapp/popup",
+    "van-field": "vant-weapp/field"
+  }
+}

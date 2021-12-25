@@ -1,0 +1,4 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='main'>
+  <rich></rich>
+</view>

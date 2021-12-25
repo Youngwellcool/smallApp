@@ -1,0 +1,5 @@
+<view>
+  <web-view src="https://hk.yunjy.com.cn/master/150/about"></web-view>
+  <!-- <web-view src="https://hk.demo.yunjy.com.cn/master/43/about"></web-view> -->
+  <!-- <web-view src="http://www.yunjy.com.cn/career/index.html"></web-view> -->
+</view>

@@ -1,0 +1,9 @@
+<!--pages/movable/movable.wxml-->
+<wxs module="test" src="./movable.wxs"></wxs> 
+<view wx:if="{{show}}" class="area" style='position:relative;width:100%;height:100%;'>
+<!-- 下面的change:prop（属性前面带change:前缀）是在 prop 属性被设置的时候触发 WXS 函数，值必须用{{}}括起来。类似 Component 定义的 properties 里面的 observer 属性，在setData({propValue: newValue})调用之后会触发。
+
+注意：WXS函数必须用{{}}括起来。当 prop 的值被设置 WXS 函数就会触发，而不只是值发生改变，所以在页面初始化的时候会调用一次WxsPropObserver的函数。 -->
+  <view change:prop="{{test.propObserver}}" prop="{{propValue}}" data-index="1" data-obj="{{dataObj}}" bindtouchstart="{{test.touchstart}}" bindtouchmove="{{test.touchmove}}" bindtouchend='{{test.touchmove}}' class="movable" style="position:absolute;width:100px;height:100px;background:red;left:{{left}}px;top:{{top}}px" bindtap="tap"></view>
+</view>
+<!-- <view bindtap='{{taptest}}'>testbindtap</view> -->

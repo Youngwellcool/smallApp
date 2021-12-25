@@ -1,0 +1,115 @@
+/**app.wxss**/
+page {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-image:url('https://ysm.onedisme.com/dayimage/simulation/bg_1.jpg'); 
+  margin: 0rpx; 
+  background-size: 100% 100%;
+}
+
+button::after{
+  border: none;
+}
+
+/* 字体加粗 */
+.bold {
+  font-weight: 700;
+}
+
+/* 字体 */
+.font23 {
+  font-size: 23rpx;
+}
+
+.font24 {
+  font-size: 24rpx;
+}
+
+.font28 {
+  font-size: 28rpx;
+}
+
+.font30 {
+  font-size: 30rpx;
+}
+
+.font36 {
+  font-size: 36rpx;
+}
+
+.font40 {
+  font-size: 40rpx;
+}
+
+.font48 {
+  font-size: 48rpx;
+}
+
+.font60 {
+  font-size: 60rpx;
+}
+
+.font68 {
+  font-size: 68rpx;
+}
+
+/* 颜色 */
+.block {
+  color: #000;
+}
+
+.title {
+  color: #333;
+}
+
+.ash {
+  color: #999;
+}
+
+.red {
+  color: #Da5c46;
+}
+
+.ink_red {
+  color: #BB5341;
+}
+
+.white {
+  color: #fff;
+}
+
+/* 布局 */
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.across_center {
+  display: flex;
+  justify-content: center;
+}
+
+.upright_center {
+  display: flex;
+  align-items: center;
+}
+
+/* 边框 */
+.border {
+  border: 1rpx solid #000;
+}
+
+/* 定位 */
+.absolutely {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

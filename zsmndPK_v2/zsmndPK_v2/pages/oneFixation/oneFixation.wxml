@@ -1,0 +1,21 @@
+<view class="home center">
+    <!-- 手和文具的定位 -->
+   <image class='shield_hand' src='https://ysm.onedisme.com/dayimage/simulation/shield_hand.png'></image>
+   <image class='right_hand' src='https://ysm.onedisme.com/dayimage/simulation/right_hand.png'></image>
+   <image class='pen' src='https://ysm.onedisme.com/dayimage/simulation/pen.png'></image>
+    <view class='major'>
+      <view class='headline font36 block bold'>
+        <text>亲爱的同学你好</text>
+        <text>请问你想报考哪所艺术大学</text>
+      </view>
+          
+          <!-- 选择学校 -->
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{items}}" >
+                <image src='{{item.name}}' class='school'></image>
+                <radio checked='{{item.checked}}' value='{{item.value}}'/>
+            </label>
+          </radio-group>
+
+    </view>
+</view>

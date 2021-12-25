@@ -1,0 +1,40 @@
+<view class="home center">
+    <view class='bg'>
+      <image src='/images/camera.png'></image>
+    </view>
+    <view class='major center'>
+      <view class='figure font36 block bold'>
+        <text>形象气质分</text>
+      </view>
+      <view class='hierarchy'>
+        <!-- 上传照片 -->
+        <view class='upload center' wx:if="{{ photoPath !== ''}}">
+          <view class='prompt center font23 title bold' style='margin-top: 50rpx' wx:if="{{ !photoPath }}" >
+            <text class='biaoti'>{{face}}</text>
+            <text class='remarks'>（注：要正面清晰才能得出客观分数哟！）</text>
+          </view>
+          <view class='picture overall'>
+            <image wx:if="{{ photoPath }}" src='{{photoPath}}'></image>
+            <image wx:if="{{ !photoPath }}" src='https://ysm.onedisme.com/dayimage/simulation/photograph.png'></image>
+          </view>
+          <view class='photograph overall font40 white' bindtap='photograph'  wx:if="{{hidphoto}}">
+            <text>拍照</text>
+          </view>
+          <view class='feature font36 title across_center' wx:if="{{ photoPath }}">
+            <text>脸型：{{distinguish.facetype}}</text>
+          </view>
+          <view class='message font36 title across_center' style='margin-top:12rpx'  wx:if="{{ photoPath }}">
+            <text>{{wx_name}}</text>
+            <text style='margin: 0 67rpx'>{{gender}}</text>
+            <text>{{distinguish.age}}岁</text>
+          </view>
+          <view class='schedule'>
+            <view class='chedule' wx:if="{{ photoPath }}">
+              <progress active='true' stroke-width='35' color="#bb5341" percent="60" style='border-radius:8px;overflow:hidden;border: 6rpx solid #bb5341' />
+              <text class='font40 white'>魅力{{distinguish.beauty}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

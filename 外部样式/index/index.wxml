@@ -1,0 +1,6 @@
+<!-- 页面的 WXML -->
+<my-component data-item='item' data-index='index' id='rt' my-class="red-text larger" />
+
+<view hover-class='rt'>fdsafdasgdsagasf</view>
+
+<button >gasf</button>

@@ -1,0 +1,48 @@
+<view class='welcome'>欢迎进入中国传媒大学模拟考试现场</view>
+<!-- 画画 -->
+  <!-- 成绩 -->
+  <view class="score">
+    <view class='achievement'>成绩</view>
+    <view class="score_row">
+      <view wx:for='{{typeData}}' data-index='{{index}}' class='subject'>
+       <block wx:if='{{item.answer==1}}'><image src='https://ysm.onedisme.com/dayimage/simulation/correct.png' class='correct'></image></block>
+       <block wx:elif="{{item.answer==2}}"><image src='https://ysm.onedisme.com/dayimage/simulation/wrong.png' class='wrong'></image></block>
+      </view>
+    </view>
+  </view>
+    <view class='draw_question'>{{artTopicName}}</view>
+    <view class="containend" id="paintingContainer">
+      <!--画布区域-->
+      <view class="canvas_area">
+        <view class='frequency_videoeiod upright_center font32 black' wx:if="{{ questionAid === 5 }}">
+        </view>
+        <!--注意：同一页面中的 canvas-id 不可重复，如果使用一个已经出现过的 canvas-id，该 canvas 标签对应的画布将被隐藏并不再正常工作-->
+        <canvas canvas-id="myCanvas" class="myCanvas" disable-scroll="false" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+        </canvas>
+      </view>
+      <!--画布工具区域-->
+      <view class="canvas_tools">
+        <view class='tool'>
+          <view class="draw_heading font28 title">粗细</view>
+          <view class="box box1" bindtap="penSelect" data-param="5"></view>
+          <view class="box box2" bindtap="penSelect" data-param="15"></view>
+          <view class="box box3" bindtap="clearCanvas"></view>
+        </view>
+        <view class='toning'>
+          <view class="draw_heading font28 title">颜色</view>
+          <view class='tone'>
+            <view class="box red" bindtap="colorSelect" data-param="#DC1C38"></view>
+            <view class="box powder" bindtap="colorSelect" data-param="#FFC3B1"></view>
+            <view class="box orange" bindtap="colorSelect" data-param="#FFA300"></view>
+            <view class="box green" bindtap="colorSelect" data-param="#66B502"></view>
+            <view class="box blue" bindtap="colorSelect" data-param="#148BFF"></view>
+            <view class="box hei" bindtap="colorSelect" data-param="#000"></view>
+          </view>
+        </view>
+          <!-- 提交 -->
+          <view bindtap='submit' class='submit'>提交</view>
+    </view>
+    </view>
+
+
+

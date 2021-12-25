@@ -1,0 +1,159 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.nav {
+  background: #f00;
+  text-align: center;
+  padding-top: 60rpx;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+.right {
+  width:50%;
+  height:100%;
+  padding:20px;
+
+}
+
+.btn {
+  padding: 10rpx 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color:#fff;
+  background-color:#f44;
+  border:1px solid #f44;
+
+}
+
+/***** 加号 *******/
+.item-add {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  right: 20rpx;
+  bottom: 20rpx;
+  background: #c05d70;
+  border-radius: 50%;
+  border: 2rpx solid #fff;
+  box-shadow: 0 0 30rpx #e2b5be;
+}
+
+.item-add::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -50%;
+  top: -50%;
+}
+
+.item-plus {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+
+.item-plus::before {
+  content: '';
+  width: 24rpx;
+  height: 4rpx;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 10rpx;
+}
+
+.item-plus::after {
+  content: '';
+  width: 4rpx;
+  height: 24rpx;
+  background: #fff;
+  position: absolute;
+  left: 10rpx;
+  top: 0;
+}
+/***** 加号 *******/
+
+
+
+/* pages/demo/demo.wxss */
+.loading-cell {
+  position:absolute;
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line-bounce {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+}
+.line-bounce text {
+  display: block;
+  width: 5px;
+  height: 26px;
+  background-color: #8fbbd8;
+  position: absolute;
+  top: calc(50% - 13px);
+  animation: line-bounce 1s infinite linear;
+}
+.line-bounce text:nth-child(1) {
+  left:15px;
+  animation-delay: 0.1s;
+}
+.line-bounce text:nth-child(2) {
+  left:30px;
+  animation-delay: 0.25s;
+}
+.line-bounce text:nth-child(3) {
+  left:45px;
+  animation-delay: 0.4s;
+}
+.line-bounce text:nth-child(4) {
+  left:60px;
+  animation-delay: 0.55s;
+}
+.line-bounce text:nth-child(5) {
+  left:75px;
+  animation-delay: 0.7s;
+}
+@keyframes line-bounce {
+  0%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(.3);
+  }
+  100%{
+    transform: scaleY(1);
+  }
+}

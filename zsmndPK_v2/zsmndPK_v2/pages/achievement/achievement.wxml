@@ -1,0 +1,38 @@
+<view class="home">
+  <view class='welcome font24 block bold'></view>
+  <!-- 橡皮擦图片 -->
+  <view class='eraser'>
+    <image src='/images/rubber.png'></image>
+  </view>
+  <!-- 书夹图片 -->
+  <view class='book_end'>
+    <image src='/images/pencil_sharpener.png'></image>
+  </view>
+  <!-- 左手图片 -->
+  <view class='left_hand'>
+    <image src='/images/shield_hand.png'></image>
+  </view>
+  <!-- 右手图片 -->
+  <view class='right_hand'>
+    <image src='/images/right_hand.png'></image>
+  </view>
+  <!-- 答题区域 -->
+    <view class='major cneter'>
+      <view class='outside overall' style='margin-top: 116rpx'>
+        <view class='inside'>
+          <view class='album'>
+            <image src='{{faceimg}}'></image>
+          </view>
+          <view class='fraction'>
+            <text class='font36 title' style='margin-top: 80rpx'>{{name}}</text>
+            <text class='font60 red'>{{sum}}分</text>
+          </view>
+        </view>
+      </view>
+      <view class='outsidend overall' style='margin-top: 80rpx'>
+        <view class='insidend across_center font30 block'>
+          <text style='width:489rpx;margin-top: 27rpx'>{{remark}}</text>
+        </view>
+      </view>
+    </view>
+</view>

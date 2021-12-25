@@ -1,0 +1,123 @@
+<!--pages/my/my.wxml-->
+<view class="tips-left" wx:if="{{ userInfo != null && userInfo.mobile == '' }}">
+    <van-notice-bar scrollable="false" text="您还没有授权手机号，账号资料无法同步。"/>
+  </view>
+  <view class="tips-right">
+    <van-button round plain hairline type="info" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权</van-button>
+  </view>
+
+<view class="div-top">
+  <image class="user-avatar" wx:if="{{ userInfo == null }}" src="../../images/avatar.png"></image>
+  <image class="user-avatar" wx:if="{{ userInfo != null }}" src="{{userInfo.smallAvatar}}"></image>
+
+    <view class="user-fans">
+      <van-row gutter="10">
+        <van-col span="10">{{ attentionNum }} 关注</van-col>
+        <van-col span="10">{{ fansNum }} 粉丝</van-col>
+      </van-row>
+    </view>
+    <view class="user-setting">
+      <!-- 未登录的设置按钮 -->
+      <van-button round plain hairline type="primary" icon="setting" size="small" custom-style="color:white;background-color:#A1A1A1;border-color:#A1A1A1;" wx:if="{{ userInfo == null }}" class="settings" bindtap="btnSettings">设置</van-button>
+      <!-- 登录后的设置按钮 -->
+      <van-button round  type="primary" icon="setting" size="small"  color="linear-gradient(to right, #4bb0ff, #6149f6)" wx:if="{{ userInfo != null }}" class="settings" bindtap="btnSettings">设置</van-button>
+    </view>
+    <!-- 扫码的图标 -->
+    <view class="scan-div" wx:if="{{ userInfo != null }}" bindtap="scan">
+    <van-icon name="scan" color="white" size="40rpx"/>
+    </view>
+
+    <view class="download-btn">
+      <van-button round type="info" size="mini" custom-style="width:150px;margin-left:1%;background-color:#A1A1A1;border-color:#A1A1A1;">下载APP</van-button>
+    </view>
+</view>
+<view class="username" wx:if="{{ userInfo != null }}">{{ userInfo.nickname }}</view>
+<view class="my-tabs">
+  <van-tabs border="" color="#DAA520" bind:change="bthTabs">
+    <van-tab title="喜欢 {{ like }}">
+      <van-grid column-num="3" border="{{ false }}" wx:if="{{ userInfo != null && like != 0 }}">
+        <van-grid-item use-slot wx:for="{{ likeVideoList }}" wx:key="key" bindtap="clickCover" data-video="{{ item }}">
+        <image
+        style="width: 122px; height: 150px;"
+        src="{{serverUrl}}{{item.video_cover}}"
+        />
+        </van-grid-item>
+      </van-grid>
+      <!-- 显示提示信息 -->
+      <view wx:if="{{ userInfo != null && like == 0 }}" class="video-span"> 
+        <image class="video-bg" src="../../images/video-bg.png"></image>
+        <view>暂无喜欢的作品</view>
+      </view>
+    </van-tab>
+    <van-tab title="作品 {{ productionNum }}">
+      <van-grid column-num="3" border="{{ false }}" wx:if="{{ userInfo != null && production.length > 0 }}">
+        <van-grid-item use-slot wx:for="{{ production }}" wx:key="key" bindtap="clickCover" data-video="{{ item }}">
+        <image
+        style="width: 122px; height: 150px;"
+        src="{{serverUrl}}{{item.video_cover}}"
+        />
+        </van-grid-item>
+      </van-grid>
+      <!-- 显示提示信息 -->
+      <view wx:if="{{ userInfo != null && production.length  == 0 }}" class="video-span">
+        <image class="video-bg" src="../../images/video-bg.png"></image>
+        <view>暂无相关作品</view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>
+
+
+<view class="login-div" wx:if="{{ userInfo == null }}">
+  <view class="login-span">
+    <image class="video-bg" src="../../images/video-bg.png"></image>
+    <view>登录后可以查看关注的作品</view>
+  </view>
+  <view class="login-btn">
+    <view class="login-wechat-btn">
+      <van-button round type="primary" size="small" icon="../../../images/wechat-icon.png" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">微信快速登录</van-button>
+    </view>
+    <view class="login-phone-btn">
+      <van-button round type="primary" size="small" icon="../../../images/phone-icon.png"  color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:click="showPopup">手机号码登录</van-button>
+    </view>
+  </view>
+</view>
+<!-- 弹出登录 -->
+<van-popup round position="bottom"  show="{{ show }}" bind:close="onClose" custom-style="height: 65%;">
+  <view class="phone-login-title">手机号码快捷登录</view>
+  <view class="phone-login-div">
+    <van-cell-group>
+      <van-field
+      value="{{ phone }}"
+      label="手机号"
+      placeholder="请输入手机号"
+      error-message="{{ phoneErrorMessage }}"
+      border="{{ false }}"
+      bindchange="phoneChange" 
+      required
+    />
+
+      <van-field
+        value="{{ sms }}"
+        center
+        clearable
+        label="短信验证码"
+        placeholder="请输入短信验证码"
+        border="{{ false }}"
+        use-button-slot
+        id="sms"
+        bindchange="btnSms"
+        required
+      >
+  <van-button slot="button" size="small" type="primary" bindtap="btnVerificationCode" wx:if="{{ isSend == null}}">发送验证码</van-button>
+  <van-button disabled slot="button" size="small" type="primary" wx:if="{{ isSend != null}}">{{ times}}s后重新发送</van-button>
+    </van-field>
+  </van-cell-group>
+    <view class="phone-login-btn">
+      <van-button round size="normal" color="linear-gradient(to right, #4bb0ff, #6149f6)" bindtap="phoneLogin" custom-style="width:300px;">登录</van-button>
+    </view>
+  </view>
+</van-popup>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+<van-notify id="van-notify" />

@@ -1,0 +1,19 @@
+<view class="home center">
+    <view class='major center'>
+      <view class='bg'>
+        <image src='/images/bg.png'></image>
+      </view>
+      <view class='heading center'>
+        <text class='font48 block' style='margin-top: 28rpx'>真实模拟</text>
+        <text class='font60 block' style='margin-top: 15rpx'>艺考水平测试</text>
+      </view>
+      <view class='hierarchy center'>
+        <view class='start across_center'>
+          <button class='font40 white'  open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">开始模拟考试</button>
+        </view>
+        <view class='ranking across_center'>
+          <button class='font40 white' bindtap='ranking'>全国艺考排名榜</button>
+        </view>
+      </view>
+    </view>
+</view>

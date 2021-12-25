@@ -1,0 +1,43 @@
+<!--选择图片页面-->
+<view class='welcome'>欢迎进入中国传媒大学模拟考试现场</view>
+
+<!-- 倒计时 -->
+<view class='time'>{{countDownNum}}</view>
+<!-- 橡皮卷笔刀手臂图片的定位 -->
+<image class='rubber' src='https://ysm.onedisme.com/dayimage/simulation/rubber.png'></image>
+<image class='pencil_sharpener' src='https://ysm.onedisme.com/dayimage/simulation/pencil_sharpener.png'></image>
+<image class='shield_hand' src='https://ysm.onedisme.com/dayimage/simulation/shield_hand.png'></image>
+<image class='right_hand' src='https://ysm.onedisme.com/dayimage/simulation/right_hand.png'></image>
+<!-- 题型 -->
+  <!-- <view class='type'>科目：编导测试</view> -->
+<!-- 成绩 -->
+  <!-- <view class="score">
+    <view class='achievement'>成绩</view>
+    <view wx:for='{{typeData}}' data-index='{{index}}' class='subject'>
+    <block wx:if='{{item.answer==1}}'><image src='https://ysm.onedisme.com/dayimage/simulation/correct.png' class='correct'></image></block>
+    <block wx:elif="{{item.answer==2}}"><image src='https://ysm.onedisme.com/dayimage/simulation/wrong.png' class='wrong'></image></block>
+    </view>
+  </view> -->
+    <view class="score">
+    <view class='achievement'>成绩</view>
+    <view class='score_row'>
+    <view wx:for='{{typeData}}' data-index='{{index}}' class='subject'>
+    <block wx:if='{{item.answer==1}}'><image src='https://ysm.onedisme.com/dayimage/simulation/correct.png' class='correct'></image></block>
+    <block wx:elif="{{item.answer==2}}"><image src='https://ysm.onedisme.com/dayimage/simulation/wrong.png' class='wrong'></image></block>
+    </view>
+    </view>
+  </view>
+  <!-- 题目序号 -->
+  <view class='serial'>第{{order}}题</view>
+  <!-- 题目 -->
+  <view class='subject_title'>{{artTopicName}}</view>
+  <!-- 题目内容 -->
+  <view class='content'>
+    <scroll-view scroll-y> {{artTopicContent}} </scroll-view>
+  </view>
+  <!-- 图片展示 -->
+  <view bindtouchstart='voice_Touchstart' bindtouchend='voice_Touchend'>
+  <image src='https://ysm.onedisme.com/dayimage/simulation/speechimg.png' class='show'></image>
+  </view>
+  
+

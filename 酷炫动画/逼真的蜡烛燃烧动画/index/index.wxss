@@ -1,0 +1,215 @@
+page {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 7px;
+  background-color: #000000;
+}
+
+.candle {
+  position: relative;
+  width: 5em;
+  height: 30em;
+  font-size: 7px;
+  background: linear-gradient(white, white, #cdcdcd, #b3b3b3 50%, #676767);
+  box-shadow: inset 2em 5em -5em rgba(0, 0, 0, 0.6), inset -2em 0 5em rgba(0, 0, 0, 0.4);
+  border-radius: 10em / 4em;
+  top: 50em;
+  left: 50%;
+}
+
+.candle:after {
+  content: "";
+  position: absolute;
+  width: 5em;
+  height: 1em;
+  border-radius: 50%;
+  background: gray;
+  top: 0.1em;
+  box-shadow: inset 0px 0px 10px 0px #fff;
+}
+
+.candle:before {
+  content: "";
+  position: absolute;
+  width: 10em;
+  height: 18em;
+  background-color: #ff6a33;
+  border-radius: 50%;
+  top: -17em;
+  left: -2em;
+  filter: blur(6em);
+  animation: blink 100ms infinite;
+}
+
+@keyframes blink {
+  to {
+    filter: blur(6em) opacity(0.8);
+  }
+}
+
+.candle .flame {
+  position: relative;
+  width: 2.4em;
+  height: 6em;
+  background-color: royalblue;
+  top: -6.5em;
+  left: 1.2em;
+  border-radius: 50% 50% 35% 35%;
+  border: 0.2em solid dodgerblue;
+  box-sizing: border-box;
+  filter: opacity(0.9);
+}
+
+.candle .flame:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 12em;
+  top: -7em;
+  left: -0.2em;
+  background: linear-gradient(white 80%, transparent);
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: 0 -0.6em 0.4em darkorange;
+  animation: enlarge ease-in-out 3s infinite alternate;
+}
+
+.candle .flame:before {
+  content: "";
+  position: absolute;
+  width: 0.6em;
+  height: 3.6em;
+  top: 3em;
+  z-index: 2;
+  left: 0.7em;
+  background: linear-gradient(#111, black, orange 90%);
+  border-radius: 40% 40% 0 0;
+}
+
+@keyframes enlarge {
+  0% {
+    height: 11.5em;
+    top: -7.5em;
+  }
+
+  50% {
+    height: 12em;
+    top: -7.5em;
+  }
+
+  100% {
+    height: 11.5em;
+    top: -7.5em;
+    left: -0.1em;
+  }
+}
+
+
+.candle1 {
+  width: 15em;
+  height: 30em;
+  font-size: 7px;
+  background: linear-gradient(orange, darkorange, sienna, saddlebrown 50%, rgba(0, 0, 0, 0.6));
+  box-shadow: inset 2em -3em 5em rgba(0, 0, 0, 0.4), inset -2em 0 5em rgba(0, 0, 0, 0.4);
+  border-radius: 10em / 4em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 10em;
+  transform: translateX(50%);
+}
+
+.candle1::before {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: 5em;
+  border: 0.2em solid darkorange;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: radial-gradient(#444, orange, saddlebrown, sienna, darkorange);
+  filter: opacity(0.7);
+}
+
+.thread1 {
+  position: absolute;
+  width: 0.6em;
+  height: 3.6em;
+  top: -1.8em;
+  background: linear-gradient(#111, black, orange 90%);
+  border-radius: 40% 40% 0 0;
+}
+
+.flames1 {
+  position: absolute;
+  width: 2.4em;
+}
+
+.flames1::before {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: 6em;
+  background-color: royalblue;
+  top: -4.8em;
+  border-radius: 50% 50% 35% 35%;
+  border: 0.2em solid dodgerblue;
+  box-sizing: border-box;
+  filter: opacity(0.7);
+}
+
+.flames1::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: 12em;
+  top: -12em;
+  background: linear-gradient(white 80%, transparent);
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: 0 -0.6em 0.4em darkorange;
+  animation: enlarge1 5s linear infinite, move 6s linear infinite;
+}
+
+@keyframes move {
+
+  0%,
+  100% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes enlarge1 {
+
+  0%,
+  100% {
+    height: 12em;
+    top: -12em;
+  }
+
+  50% {
+    height: 14em;
+    top: -13em;
+  }
+}
+
+.glow1 {
+  position: absolute;
+  width: 10em;
+  height: 18em;
+  background-color: orangered;
+  border-radius: 50%;
+  top: -17em;
+  filter: blur(6em);
+  animation: blink 100ms infinite;
+}
+
+@keyframes blink {
+  to {
+    filter: blur(6em) opacity(0.8);
+  }
+}

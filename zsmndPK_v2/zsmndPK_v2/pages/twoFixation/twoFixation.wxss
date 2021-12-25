@@ -1,0 +1,86 @@
+.home {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.major {
+  width: 727rpx;
+  height: 1079rpx;
+  position: absolute;
+  top: 0;
+}
+
+.figure {
+  margin-top: 105rpx;
+}
+
+.hierarchy {
+  width: 727rpx;
+  height: 1079rpx;
+  position: absolute;
+  top: 128rpx; 
+  left: 0;
+  z-index: 9;
+}
+
+/* 上传照片 */
+.upload {
+  width: 100%;
+}
+
+.biaoti {
+  width: 350rpx;
+  text-align: center;
+}
+
+.picture {
+  width: 335rpx;
+  height: 477rpx;
+  margin-top: 52rpx;
+  background: url('https://ysm.onedisme.com/dayimage/simulation/photograph_bg.png') no-repeat;
+  background-size: 335rpx 477rpx;
+}
+
+.picture image {
+  width: 261rpx;
+  height: 357rpx;
+}
+
+.photograph {
+  width: 157rpx;
+  height: 89rpx;
+  margin-top: 8rpx;
+  background: url('https://ysm.onedisme.com/dayimage/simulation/short.png') no-repeat;
+  background-size: 157rpx 89rpx;
+}
+
+.feature {
+  margin-top: 12rpx;
+}
+
+.chedule {
+  width: 455rpx;
+  position: relative;
+}
+
+.chedule progress {
+  width: 455rpx;
+  margin-top: 15rpx;
+}
+
+.chedule text {
+  position: absolute;
+  top: 17rpx;
+  left: 57rpx;
+}
+
+/* 底部照相机图片 */
+.bg image {
+  width: 750rpx;
+  height: 801rpx;
+  position: absolute;
+  bottom: -97rpx;
+  left: -9rpx;
+  z-index: 2;
+}

@@ -1,0 +1,4 @@
+<!--pages/scan/scan.wxml-->
+<text wx:if="{{ type == 2 }}">{{ result }}</text>
+
+<web-view wx:if="{{ type == 1 }}" src="{{ result }}"></web-view>

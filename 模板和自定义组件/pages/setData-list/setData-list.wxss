@@ -1,0 +1,6 @@
+/* pages/setData操作数据量巨大的list/setData操作数据量巨大的list.wxss */
+.item {
+  background: #ddd;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}

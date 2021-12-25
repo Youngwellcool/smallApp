@@ -1,0 +1,49 @@
+/* pages/attention/attention.wxss */
+page{
+  background-color: #1a1a1d;
+}
+.login-span{
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+.video-span{
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+.video-bg{
+  width: 150rpx;
+  height: 150rpx;
+}
+.login-btn{
+  margin: 25% auto;
+  text-align: center;
+}
+.login-phone-btn{
+  margin-top: 5%;
+}
+.phone-login-title{
+  margin: 8% 5%;
+}
+.phone-login-div{
+  width: 90%;
+  margin: 10% 5%;
+}
+.phone-login-btn{
+  margin: 80rpx 0 0 30rpx;
+}
+
+.my-tabs .van-grid-item__content{
+  background-color: transparent;
+}
+
+.my-tabs .van-tabs__wrap{
+  background-color: #1a1a1d;
+  border-bottom: 1px solid #262626;
+}
+.my-tabs .van-tab--active{
+  color: white;
+}

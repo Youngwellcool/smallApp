@@ -1,0 +1,91 @@
+/* pages/my/my.wxss */
+page{
+  background-color: #1a1a1d;
+}
+.div-top{
+  height: 240rpx;
+  width: 100%;
+}
+.user-avatar{
+  float: left;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.user-fans{
+  /*border: 1px solid red;*/
+  float: left;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 40%;
+  color: white;
+}
+.scan-div{
+  float: left;
+  margin-top: 6%;
+  margin-left: 3%;
+}
+.scan-img{
+  width: 55rpx;
+  height: 55rpx;
+}
+.user-setting{
+  float: left;
+  margin-top: 5%;
+}
+.username{
+  color: white;
+  margin-left: 6%;
+  margin-top: -5%;
+}
+.login-span{
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+.video-span{
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+.video-bg{
+  width: 150rpx;
+  height: 150rpx;
+}
+.login-btn{
+  margin: 15% auto;
+  text-align: center;
+}
+.login-phone-btn{
+  margin-top: 5%;
+}
+.tips-right{
+  float: right;
+  z-index: 100;
+  margin: -9.4% 7% 0 0;
+}
+.phone-login-title{
+  margin: 8% 5%;
+}
+.phone-login-div{
+  width: 90%;
+  margin: 10% 5%;
+}
+.phone-login-btn{
+  margin: 80rpx 0 0 30rpx;
+}
+
+.my-tabs .van-grid-item__content{
+  background-color: transparent;
+}
+
+.my-tabs .van-tabs__wrap{
+  background-color: #1a1a1d;
+  border-bottom: 1px solid #262626;
+}
+.my-tabs .van-tab--active{
+  color: white;
+}

@@ -1,0 +1,45 @@
+var startX = 0
+var startY = 0
+var lastLeft = lastTop = 50
+function touchstart(event, ins) {
+  console.log(event.touches[0].pageX)
+  console.log(ins)
+  var touch = event.touches[0] || event.changedTouches[0]
+  startX = touch.pageX
+  startY = touch.pageY
+  ins.callMethod('testCallmethod', {
+    complete: function(res) {
+      console.log('args', res)
+    },
+    a: 10
+  })
+}
+function touchmove(event, ins) {
+  var touch = event.touches[0] || event.changedTouches[0]
+  var pageX = touch.pageX
+  var pageY = touch.pageY
+  var left = pageX - startX + lastLeft
+  var top = pageY - startY + lastTop
+  startX = pageX
+  startY = pageY
+  lastLeft = left
+  lastTop = top
+  // console.log('idff', pageX - context.startX, left, top)
+  ins.selectComponent('.movable').setStyle({
+    left: left + 'px',
+    top: top + 'px'
+  })
+  // console.log('get data', JSON.stringify(ins.selectComponent('.movable')[0].getData()))
+  // console.log('get data set', JSON.stringify(ins.selectComponent('.movable')[0].getDataset()))
+  // console.log('test select', ins.selectComponent('.movable')[0].selectComponent('.dd'))
+}
+
+function propObserver(newValue, oldValue, ownerInstance, instance) {
+  console.log('prop observer', newValue, oldValue)
+}
+
+module.exports = {
+  touchstart: touchstart,
+  touchmove: touchmove,
+  propObserver: propObserver,
+}

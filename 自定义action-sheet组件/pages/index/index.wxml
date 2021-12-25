@@ -1,0 +1,7 @@
+<button bindtap='show'>点击显示action-sheet</button>
+<action-sheet actionSheetStatus='{{actionSheetStatus}}'>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">使用微信头像</button>
+  <view>拍照</view>
+</action-sheet>
+
+<vant-image width="100" height="100" src="https://img.yzcdn.cn/vant/logo.png"></vant-image>

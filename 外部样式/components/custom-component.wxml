@@ -1,0 +1,4 @@
+<!-- 组件 custom-component.wxml -->
+<view class="my-class">这段文本的颜色由组件外的 class 决定</view>
+
+<text class='~rt ~larger ~red-text'>发送给发大水发</text>

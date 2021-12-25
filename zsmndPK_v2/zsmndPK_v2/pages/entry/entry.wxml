@@ -1,0 +1,40 @@
+<form bindsubmit="formSubmit">
+<view class="home">
+  <view class='welcome font24 block bold'>欢迎进入中国传媒大学模拟考试现场</view>
+  <!-- 橡皮擦图片 -->
+  <view class='eraser'>
+    <image src='/images/rubber.png'></image>
+  </view>
+  <!-- 书夹图片 -->
+  <view class='book_end'>
+    <image src='/images/pencil_sharpener.png'></image>
+  </view>
+  <!-- 左手图片 -->
+  <view class='left_hand'>
+    <image src='/images/shield_hand.png'></image>
+  </view>
+  <!-- 右手图片 -->
+  <view class='right_hand'>
+    <image src='/images/right_hand.png'></image>
+  </view>
+  <!-- 绑定手机区域 -->
+    <view class='major center'>
+      <view class='caption font40 title bold' style='margin-top: 110rpx;'>填写手机号码查询成绩</view>
+      <view class='cheek overall'>
+        <view class='within'>
+          <view class='handset font30 ash'>
+            <input type='number' name='phone' adjust-position='true' placeholder-class='ash' placeholder='请输入手机号' maxlength="11" bindinput='cellphone'/>
+          </view>
+          <view class='identifying_code font30'>
+            <input type='number'  name='regcode' adjust-position='true' placeholder-class='ash' placeholder='请输入验证码' maxlength="6"   bindinput='getValidateCode'/>
+                <view class='title bold' style="background:{{btnBg}};" bindtap="{{!disabled?'identifying':''}}">
+              {{time}}
+              </view>
+          </view>
+        </view>
+      </view>
+      <button formType="submit" class='score font40 white'>查看成绩</button>
+    </view>
+  </view>
+
+</form>

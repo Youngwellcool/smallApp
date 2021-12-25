@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "qr/qr",
+          "pathName": "qr/qr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "miniprogram-gesture/gesture",
+          "pathName": "miniprogram-gesture/gesture",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "gesture/gesture",
+          "pathName": "gesture/gesture",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

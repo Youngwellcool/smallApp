@@ -1,0 +1,51 @@
+page{
+  height: 100%;
+  background-color: #1a1a1d;
+}
+.hot-search-div{
+  margin: 2% 0 0 5%;
+}
+.search-input-div .search-text{
+  color: #275FCC;
+}
+.search-input-div .van-search__content{
+  background-color: transparent;
+  border: 1px solid #262626;
+}
+.search-input-div input{
+  color: white;
+}
+.hot-search-div{
+  color: white;
+}
+.hot-search-div .van-tag--plain{
+  background-color: transparent;
+  font-size: 12px;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+.hot-search-div .van-tag--defaul{
+  background-color: transparent;
+}
+
+.video-span{
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+.video-bg{
+  width: 150rpx;
+  height: 150rpx;
+}
+.my-tabs .van-grid-item__content{
+  background-color: transparent;
+}
+
+.my-tabs .van-tabs__wrap{
+  background-color: #1a1a1d;
+  border-bottom: 1px solid #262626;
+}
+.my-tabs .van-tab--active{
+  color: white;
+}

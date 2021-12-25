@@ -1,0 +1,44 @@
+<view class="search-input-div">
+  <van-search
+  value="{{ searchValue }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:search="onSearch"
+  maxlength="20"
+  background="transparent"
+  shape="round"
+  bind:change="btnSearch"
+>
+  <view class="search-text" slot="action" bindtap="onSearch">搜索</view>
+</van-search>
+</view>
+
+<view class="my-tabs" wx:if="{{ isSearch != null && videoList.length > 0 }}">
+  <van-grid column-num="2" border="{{ false }}">
+    <van-grid-item use-slot wx:for="{{ videoList }}" wx:key="key" bindtap="clickCover" data-video="{{ item }}">
+      <image
+        style="width: 100%; height: 150px;"
+        src="{{serverUrl}}{{item.video_cover}}"
+      />
+    </van-grid-item>
+  </van-grid>
+</view>
+
+<view class="video-span" wx:if="{{ isSearch != null && videoList.length == 0}}">
+  <image class="video-bg" src="../../images/video-bg.png"></image>
+  <view>未搜索到结果</view>
+</view>
+
+
+<view class="hot-search-div" wx:if="{{ isSearch == null }}">
+  <view>热搜</view>
+  <view wx:for="{{ hotTags }}" wx:key="key">
+    <van-row gutter="25">
+      <van-col span="12" wx:for="{{ item }}" wx:key="key2">
+        <van-tag plain round color="#f2826a" data-name="{{ item.name }}" bindtap="btnTag">{{ item.name }}</van-tag>
+      </van-col>
+    </van-row>
+  </view>
+</view>
+<van-toast id="van-toast" />
+<van-notify id="van-notify" />

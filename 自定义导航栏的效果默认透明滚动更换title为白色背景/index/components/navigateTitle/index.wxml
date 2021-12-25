@@ -1,0 +1,12 @@
+<view class="header-title {{isActive ? 'active' : ''}}">
+  <view class="{{isActive ? 'status-bar' : ''}}" style="height:{{statusBarHeight}}px"></view>
+  <view class="title-bar" style="height:{{titleBarHeight}}px">
+    <view class="left-icon">
+      <navigator class="{{isActive ? 'actives' : 'navigator'}}" open-type="navigateBack" wx:if="{{!isShowHome}}" />
+      <navigator class="{{isActive ? 'homeIndex' : 'homePage'}}" open-type="switchTab" url="/pages/index/index" wx:else />
+    </view>
+    <view class="title {{isActive ? 'active' : ''}}">{{title}}</view>
+    <view class="right-icon"></view>
+  </view>
+</view>
+<view style="height:{{statusBarHeight + titleBarHeight + 16}}px" wx:if="{{isActive}}"></view>

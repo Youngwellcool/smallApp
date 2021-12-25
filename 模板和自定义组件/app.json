@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/canvas-image/canvas-image",
+    "pages/article/article",
+    "pages/movable-drag/movable-drag",
+    "pages/drag/drag",
+    "pages/edit/edit",
+    "pages/logs/logs",
+    "pages/a/a",
+    "pages/webview/webview",
+    "pages/setData-list/setData-list",
+    "pages/rich-new/rich-new",
+    "pages/sticky/sticky",
+    "pages/cut-image/cut-image",
+    "pages/getUser/getUser",
+    "pages/feedback/feedback",
+    "pages/canvas-demo/canvas-demo"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+  },
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "main-content": "/components/main-content/main-content",
+    "van-button": "/miniprogram_npm/vant-weapp/button/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}
